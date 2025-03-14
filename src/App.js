@@ -1,13 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from './components/Footer';
+import Home from './Pages/Home';
+import Services from './Pages/Services';
+import Portfolio from './Pages/Portfolio';
+import Contact from './Pages/Contact';
+import Mentions from './Pages/Mentions';
 
 function App() {
   return (
-    <div className="container text-center mt-5">
-      <h1>Bienvenue sur mon projet React avec Bootstrap</h1>
-      <button className="btn btn-primary">Cliquez-moi</button>
-    </div>
+    <BrowserRouter>
+      <Navbar /> 
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/services" element={<Services />} />
+        <Route path="/portfolio" element={<Portfolio />} /> 
+        <Route path="/contact" element={<Contact />} /> 
+        <Route path="/mentions" element={<Mentions />} /> 
+      </Routes>
+      <Footer /> 
+    </BrowserRouter>
+
   );
 }
 

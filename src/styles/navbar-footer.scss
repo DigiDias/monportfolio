@@ -1,0 +1,34 @@
+$primary: #007bff;
+$secondary: #6c757d;
+$dark: #343a40;
+$light: #f8f9fa;
+
+// Map des couleurs spécifiques
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "dark": $dark,
+  "light": $light
+);
+
+// Appliquer les couleurs sur Navbar
+.navbar {
+  background-color: map-get($theme-colors, "dark");
+  color: map-get($theme-colors, "light");
+
+  .nav-link {
+    color: map-get($theme-colors, "light");
+    
+    &:hover {
+      color: map-get($theme-colors, "primary");
+    }
+  }
+}
+
+// Appliquer les couleurs sur Footer
+.footer {
+  background-color: map-get($theme-colors, "dark");
+  color: map-get($theme-colors, "light");
+  text-align: center;
+  padding: 20px;
+}

@@ -3,8 +3,78 @@
 body {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 400;
+
+} 
+
+.home-title-h1, .home-title-h2{
+  font-weight: 600;
+  
+  font-weight: bold; 
 }
 
-h1, h2, h3, h4, h5, h6, strong {
-  font-weight: 600;
+.home-title-h1{
+  font-size: 4rem; 
+
+
+}
+
+.home-title-h2{
+  font-size: 3rem; 
+
+
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+#navbarNavAltMarkup{
+  justify-content: end;
+}
+
+
+
+.container-fluid {
+  text-transform: uppercase;
+ 
+}
+
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: white;
+  background-image: url('/public/img/hero-bg.jpg');
+  background-size: cover;
+  min-height: 80vh;
+  width: 100%;
+  background-repeat:no-repeat;
+  background-position: center;
+  
+}
+
+.about{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.about-img{
+  object-fit: cover
+}
+
+footer{
+  display: flex;
+  color:white;
+  justify-content: space-around;
+}
+
+.footer-title{
+  font-size: 2rem;
+  font-weight: bold;
 }
