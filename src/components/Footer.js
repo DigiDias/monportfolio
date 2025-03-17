@@ -6,7 +6,8 @@ import "../App.css"
 
 const Footer = () => {
   return (
-    <footer className="  bg-body-tertiary " data-bs-theme="dark">
+    <footer
+     className="  bg-body-tertiary " data-bs-theme="dark">
         <div className="row">
         <div className="col-md-4 col-sm-12 mb-3">
       <section className="adress">
