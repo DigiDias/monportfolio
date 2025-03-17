@@ -7,15 +7,20 @@ import "../App.css"
 const Footer = () => {
   return (
     <footer className="  bg-body-tertiary " data-bs-theme="dark">
-      <section>
+        <div className="row">
+        <div className="col-md-4 col-sm-12 mb-3">
+      <section className="adress">
         <p className="footer-title">John Doe</p>
         <adress>
-          <p>4O rue laure Diebold</p>
+          <p>40 rue laure Diebold</p>
           <p>69009 Lyon, France</p>
+        
+        <p><Link to="tel:1020304050">10 20 30 40 50</Link></p>
+        <p><Link to="mailto:johndoe@gmail.com">johndoe@gmail.com</Link></p>
         </adress>
-        <Link to="tel:1020304050">10 20 30 40 50</Link>
-        <Link to="mailto:johndoe@gmail.com">johndoe@gmail.com</Link>
       </section>
+      </div>
+      <div className="col-md-4 col-sm-12 mb-3">
       <section>
         <p className="footer-title">Lien utiles</p>
         <Link className="nav-link" aria-current="page" to="/">
@@ -34,6 +39,8 @@ const Footer = () => {
           Mentions Légales
         </Link>
       </section>
+      </div>
+      <div className="col-md-4 col-sm-12 mb-3">
       <section>
         <p className="footer-title">Mes dernieres réalisations</p>
         <p>Fresh Food</p>
@@ -44,6 +51,8 @@ const Footer = () => {
         <p>Maquette d'un site</p>
 
       </section>
+      </div>
+      </div>
     </footer>
   );
 };
