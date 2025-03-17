@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import "../styles/navbar-footer.scss";
 import "../App.css"
+import Infocontact from "./infocontact";
 
 const Footer = () => {
   return (
@@ -11,13 +12,13 @@ const Footer = () => {
         <div className="col-md-4 col-sm-12 mb-3">
       <section className="adress">
         <p className="footer-title">John Doe</p>
-        <adress>
+        <address>
           <p>40 rue laure Diebold</p>
           <p>69009 Lyon, France</p>
         
         <p><Link to="tel:1020304050">10 20 30 40 50</Link></p>
         <p><Link to="mailto:johndoe@gmail.com">johndoe@gmail.com</Link></p>
-        </adress>
+        </address>
       </section>
       </div>
       <div className="col-md-4 col-sm-12 mb-3">
