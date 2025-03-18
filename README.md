@@ -1,5 +1,5 @@
 # Projet Recat avec Bootstrap 
-Ce projet est une application React responsive sur les diiferents supports
+Ce projet est une application React responsive sur les différents supports
 il utilise la librairie CSS Bootstrap ainsi que la librairie Javascript React
 
 # Prerequis
