@@ -1,14 +1,38 @@
-import React from "react";
-import "../App.css"
+import React, { useState } from "react"; 
+import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import User from "../components/user";
+import Dedale from "../components/dedale";
+
+
 
 const Home = () => {
+  const [showDedale, setShowDedale] = useState(false); // État pour afficher Dedale
+
+  const handleClick = () => {
+    setShowDedale(true); // Affiche Dedale
+  };
+
+  const handleClose = () => {
+    setShowDedale(false); // Cache Dedale
+  };
+
+
     return (
         <main>
         <div className="home">
-        <h1 className="home-title-h1">Bonjour, je suis John Doe</h1>
+        <h1 className="home-title-h1">Bonjour, je suis <User/></h1>
         <h2 className="home-title-h2">Développeur web full stack</h2>
-        <button type="button" className="btn btn-danger">En savoir plus</button>
+        <button className="btn btn-danger" onClick={handleClick}>En savoir plus</button>
+
+        {showDedale && (
+  <div>
+    <Dedale />
+    <button id="btnFermer"   className="btn btn-secondary" onClick={handleClose}>Fermer</button>
+  </div>
+)}
+
+        
       </div>
       <section className="cont-A">
         <article className="cont-A-1">
@@ -41,6 +65,9 @@ const Home = () => {
 </div>
         </article>
 </section>
+
+
+
 
       </main>
     );

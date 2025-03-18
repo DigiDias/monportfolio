@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import "../styles/navbar-footer.scss";
 import "../App.css"
+import User from "./user";
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
         <div className="row">
         <div className="col-md-4 col-sm-12 mb-3">
       <section className="adress">
-        <p className="footer-title">John Doe</p>
+        <p className="footer-title"><User/></p>
         <adress>
           <p>40 rue laure Diebold</p>
           <p>69009 Lyon, France</p>

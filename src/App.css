@@ -101,6 +101,7 @@ footer{
   width: 100%;
   margin: 0;
   gap: 5px;
+  margin-bottom: 0;
   
 }
 
@@ -159,5 +160,51 @@ iframe{
 textarea{
   height: 100%;
 }
+
+.popup{
+  display: flex;
+  background-color: black;
+  width: 60rem;
+  
+}
+
+
+.popup img{
+  width: 25rem;
+  height: 25rem;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.popup ul{
+  list-style: none;
+}
+
+.popup-h2{
+  display: flex;
+  width: 100%;
+  margin-bottom: 0;
+  margin-left: 0;
+  background-color: black;
+  border-bottom: solid 2px grey;
+  
+}
+
+
+.popup-me{
+  border-bottom: solid 2px grey;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  gap:10px;
+}
+
+.dedale{
+  display: flex;
+  background-color: black;
+}
+
 
 
