@@ -20,7 +20,7 @@ const Dedale = () => {
 
     <div className="popup">
       <div className="popup-img">
-      <img src="/img/phots_JohnDoe.png"></img>
+      <img src="/img/phots_JohnDoe.png" alt='iconJohnDoe'></img>
       </div>
       
       {users && (

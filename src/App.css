@@ -206,5 +206,10 @@ textarea{
   background-color: black;
 }
 
+.Contener-Card{
+  display: flex;
+  justify-content: space-evenly;
+  
+}
 
 
