@@ -169,16 +169,17 @@ textarea{
 
 .popup{
   display: flex;
-
-  width: 45rem;
+  width: 100%; 
+ 
   border-bottom: solid 2px grey;
   
 }
 
 
 .popup img{
-  width: 25rem;
-  height: 25rem;
+  width: 100%; 
+  max-width: 25rem; 
+  height: auto; 
   margin-top: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -246,4 +247,8 @@ li{
   background-color: #efefef; /* Changement de couleur de fond */
   box-shadow: 0 4px 8px rgba(0.3, 0.3, 0.3, 0.3); /* Ombre légère */
 
+}
+
+.john{
+  font-size: 1.2rem;
 }

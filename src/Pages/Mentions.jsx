@@ -23,7 +23,7 @@ const Mentions = () => {
     </h2>
     <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show">
       <div className="accordion-body">
-            <strong><User/></strong>
+            <strong><User /></strong>
             <Infocontact />
               
       </div>

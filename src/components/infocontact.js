@@ -9,8 +9,8 @@ const Infocontact = ()=>{
     return(
         <address className="infoContact">
         
-        <p>40 rue laure Diebold</p>
-        <p>69009 Lyon, France</p>
+        <p><i class="bi bi-map"></i> 40 rue laure Diebold</p>
+        <p><i class="bi bi-geo-alt"></i> 69009 Lyon, France</p>
       
       <p><Link to="tel:1020304050"><i class="bi bi-phone"></i> 10 20 30 40 50</Link></p>
       <p><Link to="mailto:johndoe@gmail.com"><i class="bi bi-envelope-at"></i> johndoe@gmail.com</Link></p>

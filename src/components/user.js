@@ -4,7 +4,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const User = () =>{
     return(
+        
         "John Doe"
+       
     )
 }
 
