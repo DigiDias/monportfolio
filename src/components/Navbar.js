@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";  // ✅ Correction de l'importation
 import "../styles/navbar-footer.scss";
 import User from "./user";
 
@@ -14,11 +14,11 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
-                        <Link className="nav-link" aria-current="page" to="/">Home</Link>
-                        <Link className="nav-link" to="/services">Services</Link>
-                        <Link className="nav-link" to="/portfolio">Portfolio</Link> 
-                        <Link className="nav-link" to="/contact">Contact</Link>
-                        <Link className="nav-link" to="/mentions">Mentions Légales</Link>
+                        <NavLink className="nav-link" exact to="/" activeClassName="active">Home</NavLink>
+                        <NavLink className="nav-link" to="/services" activeClassName="active">Services</NavLink>
+                        <NavLink className="nav-link" to="/portfolio" activeClassName="active">Portfolio</NavLink> 
+                        <NavLink className="nav-link" to="/contact" activeClassName="active">Contact</NavLink>
+                        <NavLink className="nav-link" to="/mentions" activeClassName="active">Mentions Légales</NavLink>
                     </div>
                 </div>
             </div>

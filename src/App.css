@@ -94,9 +94,9 @@ header{
 }
 
 footer{
-  display: flex;
+ 
   color:white;
-  justify-content: center;
+  
   
   width: 100%;
   margin: 0;
@@ -123,9 +123,7 @@ footer section{
   width: 20rem;
 }
 
-.row{
-  justify-content: center;
-}
+
 
 .title-app{
   font-weight: bold;
@@ -239,4 +237,13 @@ textarea{
   font-size: 1.2rem;
 }
 
+.footer a, .footer Link {
+  text-decoration: none !important;
+  color: inherit !important;
+}
 
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+  color: white !important;  /*  Change la couleur du lien actif */
+  border-bottom: 2px solid white;  /* Ajoute un soulignement */
+}

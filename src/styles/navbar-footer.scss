@@ -32,3 +32,9 @@ $theme-colors: (
   text-align: center;
   padding: 20px;
 }
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+  color: white !important;  /*  Change la couleur du lien actif */
+  border-bottom: 2px solid white;  /* Ajoute un soulignement */
+}
