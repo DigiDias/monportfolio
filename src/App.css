@@ -204,13 +204,7 @@ textarea{
   background-color: black;
 }
 
-.Contener-Card{
-  display: flex;
-  justify-content: space-evenly;
-  padding-left: 0;
-  margin-bottom: 10px;
-  
-}
+
 
 .sousTitre{
   background-color: lightgrey;
@@ -223,14 +217,7 @@ textarea{
   text-align: center;
 }
 
-.card-body{
-  display: flex;
-  flex-direction: column;
- 
-  padding-left: 0;
-  
-  text-align: center;
-}
+
 
 .card-title{
   font-weight: bold;
@@ -242,8 +229,6 @@ textarea{
   color: inherit !important;
 }
 
-.navbar-nav .nav-link.active {
-  font-weight: bold;
-  color: white !important;  /*  Change la couleur du lien actif */
-  border-bottom: 2px solid white;  /* Ajoute un soulignement */
-}
+
+
+

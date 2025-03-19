@@ -13,17 +13,23 @@ const Portfolio = () => {
        <hr></hr>
         </div>
 
-        <div className="Contener-Card row">
+        <div className="Contener-Card row justify-content-evenly">
+          <div className="card cogit l-md-4 col-sm-12 mb-3 px-0" style={{width: "18rem"}}>
 
-        <div className="card cogit l-md-4 col-sm-12 mb-3 px-0" style={{width: "18rem"}}>
+       
   <img src="./img/fresh-food.jpg" className="card-img-top" alt="photo FresFood"></img>
-  <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Site de vente de produits frais en lignes</p>
-    <a href="#" className="btn btn-primary">Voir le site</a>
-    
+  <div class="card text-center d-flex flex-column h-100 ">
+
+  <div class="card-body d-flex flex-column justify-content-between">
+   <h5 class="card-title">Fresh Food</h5>
+    <p s="card-text">Site de vente en ligne</p>
+    <a href="#" class="btn btn-primary w-auto">Voir le site</a>
   </div>
-  <p className="sousTitre">Site réalisé avec PHP et MYSQL</p>
+  <div class="card-footer text-body-secondary mt-auto">
+    Site réalisé avec PHP et MYSQL
+  
+  </div>
+</div>
 </div>
 
 
@@ -32,7 +38,7 @@ const Portfolio = () => {
   <div className="card-body">
     <h5 className="card-title">Card title</h5>
     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" className="btn btn-primary">Voir le site</a>
+    <a href="#" className="btn btn-primary w-auto">Voir le site</a>
     
   </div>
   <p className="sousTitre">Site réalisé avec PHP et MYSQL</p>
