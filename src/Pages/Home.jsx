@@ -26,9 +26,9 @@ const Home = () => {
         <button className="btn btn-danger" onClick={handleClick}>En savoir plus</button>
 
         {showDedale && (
-  <div>
+  <div className="d-flex flex-column bg-dark">
     <Dedale />
-    <button id="btnFermer"   className="btn btn-secondary" onClick={handleClose}>Fermer</button>
+    <button id="btnFermer"   className="btn btn-secondary align-self-end" onClick={handleClose}>Fermer</button>
   </div>
 )}
 

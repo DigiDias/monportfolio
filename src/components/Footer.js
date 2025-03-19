@@ -25,6 +25,12 @@ const Footer = () => {
                 <Link to="mailto:johndoe@gmail.com">johndoe@gmail.com</Link>
               </p>
             </adress>
+            <div className="icones">
+            <a href="https://github.com/DigiDias" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://x.com/twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+            <a href="https://fr.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+
+            </div>
           </section>
         </div>
         <div className="col-md-4 col-sm-12 mb-3 text-start ps-5 d-flex flex-column align-items-center">

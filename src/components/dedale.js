@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react";
 import "../App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Dedale = () => {
   const [users, setUsers] = useState(null);
@@ -24,13 +26,20 @@ const Dedale = () => {
       </div>
       
       {users && (
-        <div className="popup-me">
-    <ul>
-      <li>Nom : {users.name}</li>
-      <li>Nom : {users.bio}</li>
-      <li>Repositeries : {users.public_repos}</li>
-      <li>Followers : {users.followers}</li>
-      <li>Following : {users.following}</li>
+        <div className="popup-me d-flex flex-column">
+    <ul className="d-flex flex-column">
+      <li><i className="bi bi-person"></i> {users.name}</li>
+      <hr></hr>
+      <li></li>
+      <hr></hr>
+      <li><i class="bi bi-card-text"></i> {users.bio}</li>
+
+      <hr></hr>
+      <li><i class="bi bi-box"></i> Repositeries : {users.public_repos}</li>
+      <hr></hr>
+      <li><i class="bi bi-people"></i> Followers : {users.followers}</li>
+      <hr></hr>
+      <li><i class="bi bi-people"></i> Following : {users.following}</li>
     </ul>
     
     </div>
