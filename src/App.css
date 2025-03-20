@@ -1,254 +1,190 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap");
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
-
- 
-
-} 
-
-.title-h1, .title-h2{
-  font-weight: 600;
-  
-  font-weight: bold; 
 }
 
-.title-h1{
-  font-size: 4rem; 
-
-
-}
-
-.title-h2{
-  font-size: 3rem; 
-
-
-}
-
-header{
-  display: flex;
-  flex-direction: column;
- 
-}
-
-#navbarNavAltMarkup{
+#navbarNavAltMarkup {
   justify-content: end;
 }
 
-
-
-.container-fluid {
-  text-transform: uppercase;
- 
-}
-
-.home{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  color: white;
-  background-image: url('/public/img/hero-bg.jpg');
+.home {
+  background-image: url("/public/img/hero-bg.jpg");
   background-size: cover;
   min-height: 80vh;
   width: 100%;
-
-  
 }
 
 .cont-A {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 40px; 
-  padding: 40px; 
-  border: 2px solid grey(0, 0, 0, 0.2); 
+  gap: 40px;
+  padding: 40px;
+  border: 2px solid grey(0, 0, 0, 0.2);
   margin-top: 30px;
   margin-bottom: 30px;
-  box-shadow:  5px 5px 5px 5px rgba(0, 0, 0, 0.3); /* Ombre autour du bloc */
-  background-color: white; 
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3); /* Ombre autour du bloc */
+  background-color: white;
   width: 90%;
   margin: 0 auto; /* Centre horizontalement */
-  
-  
-  
 }
 
-.cont-A-1, .cont-A-2 {
+.cont-A-1,
+.cont-A-2 {
   width: 45%; /* Réduire un peu la largeur pour éviter les débordements */
-  min-width: 300px; 
+  min-width: 300px;
   text-align: justify;
   display: flex;
   flex-direction: column;
-  gap:5px;
+  gap: 5px;
 }
 
 .about-img {
-  width: 100%; 
+  width: 100%;
 
-  height: auto; 
+  height: auto;
   object-fit: cover;
-  
 }
 
 .img-banniere {
-  width: 100%; 
+  width: 100%;
 
-  height: auto; 
+  height: auto;
   object-fit: cover;
-  
 }
 
-footer{
- 
-  color:white;
-  
-  
+footer {
+  color: white;
+
   width: 100%;
   margin: 0;
   gap: 5px;
   margin-bottom: 0;
-  
 }
 
-.footer-title{
-  font-size: 1,2rem;
+.footer-title {
+  font-size: 1, 2rem;
   font-weight: bold;
 }
 
-.progress{
+.progress {
   width: 100%;
 }
 
-.comp{
+.comp {
   margin-bottom: 5px;
   margin-top: 15px;
 }
 
-footer section{
+footer section {
   width: 20rem;
 }
 
-
-
-.title-app{
+.title-app {
   font-weight: bold;
   font-size: 1.5rem;
   border-bottom: rgb(15, 86, 240) solid 5px;
 }
 
-.center{
+.center {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
 hr {
   margin: 1rem 0;
-  width: 50%; 
-  height: 3px; 
-  background-color: blue; 
-  
-  
+  width: 50%;
+  height: 3px;
+  background-color: blue;
 }
 
-
-
-iframe{
+iframe {
   width: 100%;
   height: 30rem;
 }
-textarea{
+textarea {
   height: 100%;
 }
 
-.popup{
+.popup {
   display: flex;
-  width: 100%; 
- 
+  width: 100%;
+
   border-bottom: solid 2px grey;
-  
 }
 
-
-.popup img{
-  width: 100%; 
-  max-width: 25rem; 
-  height: auto; 
+.popup img {
+  width: 100%;
+  max-width: 25rem;
+  height: auto;
   margin-top: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
-  
 }
 
-
-.popup ul{
+.popup ul {
   list-style: none;
 }
 
-.popup-h2{
+.popup-h2 {
   display: flex;
   width: 100%;
   margin-bottom: 0;
   margin-left: 0;
- 
   border-bottom: solid 2px grey;
-  
 }
 
-
-.popup-me{
-
+.popup-me {
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: left;
-  gap:10px;
+  gap: 10px;
 }
 
-
-
-
-
-.sousTitre{
+.sousTitre {
   background-color: lightgrey;
   text-align: center;
   margin-bottom: 0;
-  
 }
 
-
-
-
-.card-title{
+.card-title {
   font-weight: bold;
   font-size: 1.2rem;
 }
 
-.footer a, .footer Link {
+.footer a,
+.footer Link {
   text-decoration: none !important;
   color: inherit !important;
 }
 
-.infoContact a{
+.infoContact a {
   text-decoration: none !important;
   color: inherit !important;
 }
 
-li{
+li {
   width: 15rem;
 }
 
 .card:hover {
   background-color: #efefef; /* Changement de couleur de fond */
   box-shadow: 0 4px 8px rgba(0.3, 0.3, 0.3, 0.3); /* Ombre légère */
-
 }
 
-.john{
+.john {
   font-size: 1.2rem;
+}
+
+.btn-danger:hover {
+  background-color: #bb2d3b;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7; /* Bleu Bootstrap assombri */
 }

@@ -8,7 +8,7 @@ $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
   "dark": $dark,
-  "light": $light
+  "light": $light,
 );
 
 // Appliquer les couleurs sur Navbar
@@ -18,7 +18,7 @@ $theme-colors: (
 
   .nav-link {
     color: map-get($theme-colors, "light");
-    
+
     &:hover {
       color: map-get($theme-colors, "primary");
     }
@@ -35,26 +35,30 @@ $theme-colors: (
 
 .navbar-nav .nav-link.active {
   font-weight: bold;
-  color: white !important;  /*  Change la couleur du lien actif */
-  border-bottom: 2px solid white;  /* Ajoute un soulignement */
+
+  border-bottom: 2px solid white; /* Ajoute un soulignement */
 }
 
-.icones{
+.navbar-nav .nav-link:hover {
+  font-weight: bold;
+
+  border-bottom: 2px solid white; /* Ajoute un soulignement */
+}
+
+.icones {
   display: flex;
   gap: 10px;
-  
 }
 
-i{
+i {
   font-size: 24px;
   color: gray;
-
 }
 
- i:hover {
-  opacity: 0.7; /* Rend l'icône plus claire */
+i:hover {
+  color: white;
 }
 
-.nav-link:hover{
-  color: rgb(65, 134, 219) !important;
+.nav-link:hover {
+  font-weight: bold;
 }
