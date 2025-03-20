@@ -7,7 +7,7 @@ import User from "./user";
 
 const Footer = () => {
   return (
-    <footer className="footer bg-body-tertiary  d-flex justify-content-evenly" data-bs-theme="dark">
+    <footer className="footer bg-body-tertiary  d-flex justify-content-evenly mt-4" data-bs-theme="dark">
       <div className="row justify-content-center ">
         <section className="col-md-4 col-sm-12 mb-3 text-md-start text-center px-3 w-33">
           

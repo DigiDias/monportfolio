@@ -13,7 +13,7 @@ const Services = () => {
             
        <hr></hr>
         </div>
-        <div className="Contener-Card row d-flex justify-content-evenly mb-4">
+        <div className="Contener-Card row d-flex justify-content-evenly mb-4 gap-4">
 
         <div className="card" style={{width: "18rem"}}>
   <div className="card-body d-flex  flex-column align-items-center">

@@ -16,7 +16,7 @@ const Contact = () => {
        <hr></hr>
         </div>
         <section className="cont-A">
-            <article className="cont-A-1">
+            <form className="cont-A-1">
             <p className="title-app">Formulaire de contact</p>
             <input type="text" placeholder="Votre nom" required></input>
             <input type="text" placeholder="Votre adresse mail" required></input>
@@ -24,7 +24,8 @@ const Contact = () => {
             <input type="text" placeholder="Sujet" required></input>
             <textarea  placeholder="Votre message" required></textarea>
         
-        </article>
+            <button type="submit" className="btn btn-primary align-self-center">Envoyer</button>"
+        </form>
         <article className="cont-A-2">
             <p className="title-app">Mes coordonnées</p>
             <p>John Doe</p>
