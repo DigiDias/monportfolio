@@ -1,11 +1,52 @@
-import React from "react";
+import {useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
-import { Link } from "react-router-dom";
+
 import Infocontact from "../components/infocontact";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-const Contact = () => {
+const Contact = ({ nom, prenom, adresse, codePostal, ville, Pays }) => {
+    console.log("Contact render");
+  
+  const [nomF, setNomF] = useState("");
+  const [sujet, setSujet] = useState("");
+  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
+  const [telephone, setTelephone] = useState("");
+  const [messageStatus, setMessageStatus] = useState(null);
+  const [isError, setIsError] = useState(false);
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const data = {
+    nom: nomF,
+    email,
+    telephone,
+    sujet,
+    message,
+  };
+
+  try {
+    const response = await fetch("/api/mail/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+    console.log("Réponse serveur :", result);
+    setMessageStatus("Message envoyé avec succès !");
+     setIsError(false);
+  } catch (error) {
+    console.error("Erreur envoi :", error);
+    setMessageStatus("Erreur lors de l'envoi du message.");
+     setIsError(true);
+  }
+};
+
   return (
     <main style={{ paddingTop: "100px" }}>
       <div className="center">
@@ -17,28 +58,61 @@ const Contact = () => {
         <hr></hr>
       </div>
       <section className="cont-A d-flex flex-wrap justify-content-center gap-4 p-4 border border-secondary-subtle mt-3 mb-3 shadow-lg bg-white w-90 mx-auto">
-        <form className="cont-A-1">
+        <form onSubmit={handleSubmit} className="cont-A-1">
           <p className="title-app">Formulaire de contact</p>
-          <input type="text" placeholder="Votre nom" required></input>
-          <input type="text" placeholder="Votre adresse mail" required></input>
+<input
+  type="text"
+  placeholder="Votre nom"
+
+  id="nomF"
+  value={nomF}
+  onChange={(e) => {
+    console.log("valeur saisie :", e.target.value);
+    setNomF(e.target.value);
+  }}
+/>
+
+
+          <input type="text" placeholder="Votre adresse mail"  id="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
           <input
             type="text"
             placeholder="Votre numero de telephone"
-            required
+        
+            id="telephone"
+            value={telephone}
+            onChange={(e) => setTelephone(e.target.value)}
           ></input>
-          <input type="text" placeholder="Sujet" required></input>
-          <textarea placeholder="Votre message" required></textarea>
+          <input type="text" placeholder="Sujet" id="sujet" value={sujet} onChange={(e) => setSujet(e.target.value)}></input>
+
+          <textarea placeholder="Votre message"  id="message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
           <button type="submit" className="btn btn-primary align-self-center">
             Envoyer
           </button>
-          "
+
+{messageStatus && (
+  <div
+    className={`alert ${isError ? "alert-danger" : "alert-success"} mt-3`}
+    role="alert"
+  >
+    {messageStatus}
+  </div>
+)}
+
+          
         </form>
         <article className="cont-A-2">
           <p className="title-app">Mes coordonnées</p>
-          <p>John Doe</p>
-          <Infocontact />
+          <p>Sammy Gouljiar</p>
+          <Infocontact
+            nom={nom}
+            prenom={prenom}
+            adresse={adresse}
+            codePostal={codePostal}
+            ville={ville}
+            Pays={Pays}
+          />
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5565.253931507972!2d4.7964039750926295!3d45.778665712403885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4eb65edac5b3f%3A0xe01c47049cb2e2b9!2s40%20Rue%20Laure%20Diebold%2C%2069009%20Lyon!5e0!3m2!1sfr!2sfr!4v1742198219513!5m2!1sfr!2sfr"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2706.335771325818!2d55.500041073706626!3d-21.26411098123294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21787551e03dcbdb%3A0x589065505de775d8!2s200%20Rue%20Emmanuel%20Burel%2C%20Le%20Tampon%2097430%2C%20La%20R%C3%A9union!5e1!3m2!1sfr!2sfr!4v1768206811839!5m2!1sfr!2sfr"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"

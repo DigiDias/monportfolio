@@ -5,7 +5,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import Infocontact from "../components/infocontact";
 import User from "../components/user";
 
-const Mentions = () => {
+const Mentions = ({ nom, prenom, adresse, codePostal, Ville, Pays }) => {
   return (
     <main style={{ paddingTop: "100px" }}>
       <div className="center">
@@ -33,9 +33,15 @@ const Mentions = () => {
           >
             <div className="accordion-body">
               <strong>
-                <User />
+                {prenom} {nom}
               </strong>
-              <Infocontact />
+              <Infocontact 
+                 nom={nom}
+                 prenom={prenom}
+                 adresse={adresse}
+                 codePostal={codePostal}
+                 ville={Ville}
+                 Pays={Pays}/>
             </div>
           </div>
         </div>
@@ -97,18 +103,10 @@ const Mentions = () => {
               </p>
               <p>
                 <italic>
-                  Les images utilisées sur ce site sont libres de droits et ont
-                  été obtenues sur le site <a href="">Pixabay</a>
+                  Les images utilisées sur ce site sont libres de droits 
                 </italic>
               </p>
-              <p>
-                <italic>
-                  Le davicon de ce site à été fournies par{" "}
-                  <a href="">
-                    <User /> icons erstellt von Freepik - Flaticon
-                  </a>
-                </italic>
-              </p>
+            
             </div>
           </div>
         </div>

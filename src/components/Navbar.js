@@ -11,7 +11,7 @@ const Navbar = () => {
       data-bs-theme="dark"
     >
       <div className="container-fluid text-uppercase">
-        <a className="navbar-brand">
+        <a className="navbar-brand" href="/">
           <User />
         </a>
         <button
@@ -27,37 +27,40 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <NavLink className="nav-link" exact to="/" activeClassName="active">
+            <NavLink className="nav-link"  to="/" >
               Home
             </NavLink>
             <NavLink
               className="nav-link"
               to="/services"
-              activeClassName="active"
+             
             >
               Services
             </NavLink>
             <NavLink
               className="nav-link"
               to="/portfolio"
-              activeClassName="active"
+           
             >
               Portfolio
             </NavLink>
-            <NavLink
-              className="nav-link"
-              to="/contact"
-              activeClassName="active"
-            >
-              Contact
-            </NavLink>
+        <NavLink
+  to="/contact"
+  className={({ isActive }) =>
+    `nav-link ${isActive ? "active" : ""}`
+  }
+>
+  Contact
+</NavLink>
             <NavLink
               className="nav-link"
               to="/mentions"
-              activeClassName="active"
+          
             >
               Mentions Légales
             </NavLink>
+
+        
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ const Dedale = () => {
 
   const getUsers = async () => {
     try {
-      const res = await fetch("https://api.github.com/users/github-john-doe");
+      const res = await fetch("https://api.github.com/users/digidias");
       if (!res.ok)
         throw new Error("Erreur lors de la récupération des données");
       const json = await res.json();
@@ -30,7 +30,7 @@ const Dedale = () => {
 
       <div className="popup">
         <div className="popup-img">
-          <img src="/img/phots_JohnDoe.png" alt="Photo de John Doe" />
+          <img src="/img/avatar_Sammy.jpg" alt="Avatar Sammy" />
         </div>
 
         {users && (
@@ -51,6 +51,16 @@ const Dedale = () => {
               </li>
               <li>
                 <i class="bi bi-people"></i> Following : {users.following}
+              </li>
+
+                 <li>
+                <i className="bi bi-file-earmark-person cv-icon"></i>{" "}
+  <a
+    href="https://digidias.onrender.com/" target="_blank"
+    style={{ textDecoration: "none", color: "inherit" }}
+  >
+    Voir le CV
+  </a>
               </li>
             </ul>
           </div>

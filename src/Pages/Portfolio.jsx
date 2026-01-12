@@ -25,20 +25,21 @@ const Portfolio = () => {
             
           >
             <img
-              src="./img/fresh-food.jpg"
+              src="./img/foot.jpg"
               className="card-img-top"
-              alt="image FresFood"
+              alt="image foot"
             ></img>
             <div class="card text-center d-flex flex-column h-100 ">
               <div class="card-body d-flex flex-column justify-content-between">
-                <h5 class="card-title">Fresh Food</h5>
-                <p s="card-text">Site de vente en ligne</p>
-                <a href="#" class="btn btn-primary align-self-center ">
+                <h5 class="card-title">Championnat de Foot</h5>
+                <p s="card-text">Site de gestion d'un championnat interne de foot</p>
+                <a href="https://ravatefoot.onrender.com/" class="btn btn-primary align-self-center "
+                target="_blank">
                   Voir le site
                 </a>
               </div>
               <div class="card-footer text-body-secondary mt-auto">
-                Site réalisé avec PHP et MYSQL
+                Site réalisé avec PHP MYSQL et BOOTSTRAPP
               </div>
             </div>
           </div>
@@ -48,20 +49,20 @@ const Portfolio = () => {
             
           >
             <img
-              src="./img/restaurant-japonais.jpg"
+              src="./img/sav.jpg"
               className="card-img-top"
-              alt="image Restaurant Japonais"
+              alt="photo service après vente"
             ></img>
             <div class="card text-center d-flex flex-column h-100 ">
               <div class="card-body d-flex flex-column justify-content-between">
-                <h5 class="card-title">Restaurant Akira</h5>
-                <p s="card-text">Site de vente de produits frais en ligne</p>
-                <a href="#" class="btn btn-primary align-self-center ">
+                <h5 class="card-title">Service après vente</h5>
+                <p s="card-text">Site de SAV</p>
+                <a href="/SAV" class="btn btn-primary align-self-center ">
                   Voir le site
                 </a>
               </div>
               <div class="card-footer text-body-secondary mt-auto">
-                Site réalisé avec WordPress
+                Site réalisé avec REACT, EXPRESS, API JIRA, BOOTSTRAPP, JAVASCRIPT et POWER BI
               </div>
             </div>
           </div>
@@ -71,20 +72,20 @@ const Portfolio = () => {
             
           >
             <img
-              src="./img/espace-bien-etre.jpg"
+              src="./img/avatar_Sammy.jpg"
               className="card-img-top"
-              alt="image Espace Bien être"
+              alt="mon avatar"
             ></img>
             <div class="card text-center d-flex flex-column h-100 ">
               <div class="card-body d-flex flex-column justify-content-between">
-                <h5 class="card-title">Espace bien-être</h5>
-                <p s="card-text">Site de vente de produits frais en ligne</p>
-                <a href="#" class="btn btn-primary align-self-center ">
+                <h5 class="card-title">Curriculum vitae</h5>
+                <p s="card-text">Digitalisation de mon CV</p>
+                <a href="https://digidias.onrender.com/" class="btn btn-primary align-self-center " target="_blank">
                   Voir le site
                 </a>
               </div>
               <div class="card-footer text-body-secondary mt-auto">
-                Site réalisé avec LARAVEL
+                Site HTML CSS et BOOTSTRAPP
               </div>
             </div>
           </div>
@@ -94,22 +95,22 @@ const Portfolio = () => {
             
           >
             <img
-              src="./img/SEO.jpg"
+              src="./img/PowerBi.jpg"
               className="card-img-top"
-              alt="image SEO"
+              alt="image Power BI"
             ></img>
             <div class="card text-center d-flex flex-column h-100 ">
               <div class="card-body d-flex flex-column justify-content-between">
-                <h5 class="card-title">SEO</h5>
+                <h5 class="card-title">Tableaux de Bord Power BI Intégrés</h5>
                 <p s="card-text">
-                  Amélioration d'un référencement d'un site e-commerce
+                  Mise en place de tableaux de bord Power BI intégrés dans une application web
                 </p>
-                <a href="#" class="btn btn-primary align-self-center ">
+                <a href="/powerbi" class="btn btn-primary align-self-center ">
                   Voir le site
                 </a>
               </div>
               <div class="card-footer text-body-secondary mt-auto">
-                Utilisation des outils SEO
+                POWER BI, HTML, JAVASCRIPT, BOOTSRAPP, EXPRESS
               </div>
             </div>
           </div>
@@ -119,20 +120,20 @@ const Portfolio = () => {
             
           >
             <img
-              src="./img/coder.jpg"
+              src="./img/Loyer.jpg"
               className="card-img-top"
               alt="image coder"
             ></img>
             <div class="card text-center d-flex flex-column h-100 ">
               <div class="card-body d-flex flex-column justify-content-between">
-                <h5 class="card-title">Création d'une API</h5>
-                <p s="card-text">Création d'une API RESTFULL publique</p>
-                <a href="#" class="btn btn-primary align-self-center ">
+                <h5 class="card-title">Gestion de SCI</h5>
+                <p s="card-text">Création d'une appli de gestion des loyers</p>
+                <a href="/holding" class="btn btn-primary align-self-center ">
                   Voir le site
                 </a>
               </div>
               <div class="card-footer text-body-secondary mt-auto">
-                PHP - SYMFONY
+                EXPRESS, REACT, API INSEE, BOOTSTRAPP, JAVASCRIPT
               </div>
             </div>
           </div>
@@ -148,8 +149,8 @@ const Portfolio = () => {
             <div class="card text-center d-flex flex-column h-100 ">
               <div class="card-body d-flex flex-column justify-content-between">
                 <h5 class="card-title">Maquette d'un site Web</h5>
-                <p s="card-text">Création du prototype d'un site</p>
-                <a href="#" class="btn btn-primary align-self-center ">
+                <p s="card-text">Création du prototype d'un site réalisé dans le cadre d'un devoir du CFE</p>
+                <a target="_blank" href="https://www.figma.com/design/av8Vhqj53KHlC3Ck8UgFVB/Devoir-4-Figma?node-id=48-12&p=f&t=1mQPdjHJ8UTka2VP-0" class="btn btn-primary align-self-center ">
                   Voir le site
                 </a>
               </div>

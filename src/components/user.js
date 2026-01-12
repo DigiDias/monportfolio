@@ -3,7 +3,8 @@ import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const User = () => {
-  return "John Doe";
+  return "Sammy Gouljiar";
 };
 
 export default User;
+
