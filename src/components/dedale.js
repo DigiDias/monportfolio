@@ -29,7 +29,7 @@ const Dedale = () => {
       </h2>
 
       <div className="popup">
-        <div className="popup-img">
+        <div className="popup-img t">
           <img src="/img/avatar_Sammy.jpg" alt="Avatar Sammy" />
         </div>
 
@@ -37,7 +37,7 @@ const Dedale = () => {
           <div className="popup-me d-flex flex-column">
             <ul className="d-flex flex-column">
               <li className="border-bottom border-secondary pb-2">
-                <i class="bi bi-person"></i> {users.name}
+                <i class="bi bi-person"></i> <span>{users.name}</span>
               </li>
 
               <li className="border-bottom border-secondary pb-2">
@@ -49,11 +49,11 @@ const Dedale = () => {
               <li className="border-bottom border-secondary pb-2">
                 <i class="bi bi-people"></i> Followers : {users.followers}
               </li>
-              <li>
+            <li className="border-bottom border-secondary pb-2">
                 <i class="bi bi-people"></i> Following : {users.following}
               </li>
 
-                 <li>
+                       <li className="border-bottom border-secondary pb-2">
                 <i className="bi bi-file-earmark-person cv-icon"></i>{" "}
   <a
     href="https://digidias.onrender.com/" target="_blank"
