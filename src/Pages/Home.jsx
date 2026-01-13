@@ -18,17 +18,20 @@ const Home = ({ nom, prenom, adresse, codePostal, Ville, Pays }) => {
 
   return (
     <div>
-    <main className="d-flex flex-column justify-content-center align-items-center w-100">
-      <div className="home d-flex flex-column justify-content-center align-items-center text-center text-white bg-cover vh-80 w-100">
+    <main className="d-flex flex-column justify-content-center align-items-center w-100 ">
+      <div className="home d-flex flex-column align-items-center text-center text-white bg-cover vh-80 w-100 pt-5 mt-5">
+    
         <h1 className="home-title-h1 fw-semibold fs-1">
           Bonjour, je suis {prenom} {nom} 
         </h1>
        <h2 className="home-title-h2 fw-semibold">
   Développeur web full stack – React, Node.js, Power BI
 </h2>
-        <button className="btn btn-danger" onClick={handleClick}>
+
+{!showDedale && ( <button className="btn btn-danger" onClick={handleClick}>
           En savoir plus
-        </button>
+        </button>)}
+       
 
         {showDedale && (
           <div className="d-flex flex-column bg-dark">
@@ -43,6 +46,7 @@ const Home = ({ nom, prenom, adresse, codePostal, Ville, Pays }) => {
           </div>
         )}
       </div>
+    
       <section className="cont-A d-flex flex-wrap justify-content-center gap-4 p-4 border border-secondary-subtle mt-3 mb-3 shadow-lg bg-white w-90 mx-auto">
         <article className="cont-A-1 ">
           <p className="title-app">À propos</p>
