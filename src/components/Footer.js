@@ -1,29 +1,29 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
 import "../styles/navbar-footer.scss";
+import { Link } from "react-router-dom";
 import "../App.css";
 
 
 const Footer = ({ nom, prenom, adresse, codePostal, ville, Pays }) => {
   return (
     <footer
-      className="footer bg-body-tertiary  d-flex flex-column align-items-center mt-4 w-100"
+      className="footer bg-body-tertiary  d-flex flex-column align-items-center mt-4 w-100 small"
       data-bs-theme="dark"
     >
-      <section className="d-flex justify-content-evenly flex-wrap w-100 p-4 border-bottom border-secondary-subtle ">
-        <section className="col-md-4 col-sm-12 mb-3 text-md-start text-center px-3 ">
+      <section className="d-flex justify-content-evenly flex-wrap w-100 p-4 border-bottom border-secondary-subtle mb-1">
+        <section className="col-md-4 col-sm-12 mb-3 text-md-start text-center px-3">
           <p className="footer-title ">
-           {prenom} {nom}
+           <a href="/">{prenom} {nom}</a>
           </p>
-          <address>
-            <p>{adresse}</p>
-            <p>{ codePostal} {ville} {Pays}</p>
+          <address className="lh-sm">
+            <p className="mb-1">{adresse}</p>
+            <p className="mb-1">{ codePostal} {ville} {Pays}</p>
 
-            <p>
+            <p className="mb-1">
               <Link to="tel:0692823999">0692 82 39 99</Link>
             </p>
-            <p>
+            <p className="mb-1">
               <Link to="mailto:sammy.gouljiar@gmail.com">sammy.gouljiar@digidias.re</Link>
             </p>
           </address>
@@ -92,6 +92,12 @@ const Footer = ({ nom, prenom, adresse, codePostal, ville, Pays }) => {
               <i class="bi bi-linkedin"></i>
             </a>
           </div>
+
+         <div>
+  <p>
+    &copy; {new Date().getFullYear()} {prenom} {nom} - Tous droits réservés.
+  </p>
+</div>
       
     </footer>
   );

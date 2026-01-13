@@ -63,12 +63,12 @@ const Mentions = ({ nom, prenom, adresse, codePostal, Ville, Pays }) => {
             className="accordion-collapse collapse"
           >
             <div className="accordion-body">
-              <strong>alwaysdata</strong>
+              <strong>OVH</strong>
               <p>
-                <address>91 Rue Faubourg Saint-Honoré, 75008 Paris </address>
+                <address>2, rue Kellermann, 59100 Roubaix </address>
               </p>
-              <a href=">www.alwaydate.com" target="_blank">
-                www.alwaydate.com
+              <a href="https://www.ovhcloud.com/fr/" target="_blank">
+                https://www.ovhcloud.com/fr/
               </a>
             </div>
           </div>

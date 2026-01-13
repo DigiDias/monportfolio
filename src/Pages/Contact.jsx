@@ -6,7 +6,7 @@ import Infocontact from "../components/infocontact";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 const Contact = ({ nom, prenom, adresse, codePostal, ville, Pays }) => {
-    console.log("Contact render");
+
   
   const [nomF, setNomF] = useState("");
   const [sujet, setSujet] = useState("");
@@ -67,7 +67,8 @@ const handleSubmit = async (e) => {
   id="nomF"
   value={nomF}
   onChange={(e) => {
-    console.log("valeur saisie :", e.target.value);
+
+    
     setNomF(e.target.value);
   }}
 />

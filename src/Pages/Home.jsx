@@ -23,9 +23,9 @@ const Home = ({ nom, prenom, adresse, codePostal, Ville, Pays }) => {
         <h1 className="home-title-h1 fw-semibold fs-1">
           Bonjour, je suis {prenom} {nom} 
         </h1>
-        <h2 className="home-title-h2 fw-semibold">
-          Développeur web full stack
-        </h2>
+       <h2 className="home-title-h2 fw-semibold">
+  Développeur web full stack – React, Node.js, Power BI
+</h2>
         <button className="btn btn-danger" onClick={handleClick}>
           En savoir plus
         </button>

@@ -39,20 +39,7 @@ const Gallery = () => {
     afin de renforcer la protection des accès applicatifs.
   </p>
 
-  <p className="mb-2">
-    L’application intègre l’<strong>API Jira</strong> afin de centraliser les projets, tickets et suivis
-    opérationnels, améliorant ainsi la coordination et la visibilité des équipes.
-  </p>
 
-  <p className="mb-2">
-    Le frontend est développé en <strong>React</strong>, avec une gestion des états via les hooks, une
-    communication sécurisée avec le backend et des formulaires dynamiques.
-  </p>
-
-  <p className="mb-0">
-    Ce projet applique des <strong>bonnes pratiques full-stack</strong> : séparation des responsabilités,
-    architecture modulaire, authentification forte (JWT + 2FA), et préparation à l’intégration/déploiement.
-  </p>
 </article>
 
 
