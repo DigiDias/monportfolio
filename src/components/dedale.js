@@ -59,7 +59,7 @@ const Dedale = () => {
     href="https://digidias.onrender.com/" target="_blank"
     style={{ textDecoration: "none", color: "inherit" }}
   >
-    Voir le CV
+    Voir mon CV
   </a>
               </li>
             </ul>

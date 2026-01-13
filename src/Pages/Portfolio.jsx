@@ -4,12 +4,8 @@ import "../App.css";
 
 const Portfolio = () => {
   return (
-    <main>
-      <img
-        className="img-banniere"
-        src="/img/banner.jpg"
-        alt="Image de la banniére"
-      ></img>
+   <main style={{ paddingTop: "100px" }}>
+     
 
       <div>
         <div className="center">

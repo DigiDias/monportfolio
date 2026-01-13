@@ -11,7 +11,7 @@ const Footer = ({ nom, prenom, adresse, codePostal, ville, Pays }) => {
       className="footer bg-body-tertiary  d-flex flex-column align-items-center mt-4 w-100 small"
       data-bs-theme="dark"
     >
-      <section className="d-flex justify-content-evenly flex-wrap w-100 p-4 border-bottom border-secondary-subtle mb-1">
+      <section className="d-flex justify-content-evenly flex-wrap w-100 p-4 border-bottom border-secondary-subtle mb-1 fst-italic">
         <section className="col-md-4 col-sm-12 mb-3 text-md-start text-center px-3">
           <p className="footer-title ">
            <a href="/">{prenom} {nom}</a>

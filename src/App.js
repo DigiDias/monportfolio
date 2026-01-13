@@ -1,6 +1,8 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import ScrollToTop  from "./components/ScollTopTop.jsx";
+
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -13,6 +15,7 @@ import Mentions from "./Pages/Mentions";
 import SAV from "./Pages/SAV";  
 import PowerBi from "./Pages/PowerBI";  
 import Holding from "./Pages/Holding";
+
 
 function App() {
 
@@ -30,6 +33,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
+            <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home {...userData}/>} />
         <Route path="/services" element={<Services />} />
