@@ -5,7 +5,7 @@ import "../App.css";
 import Infocontact from "../components/infocontact";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-const Contact = ({ nom, prenom, adresse, codePostal, ville, Pays }) => {
+const Contact = ({ nom, prenom, adresse, codePostal, ville, Pays, Tel, Email }) => {
 
   
   const [nomF, setNomF] = useState("");
@@ -103,7 +103,7 @@ const handleSubmit = async (e) => {
         </form>
         <article className="cont-A-2">
           <p className="title-app">Mes coordonnées</p>
-          <p>Sammy Gouljiar</p>
+          <p>{prenom} {nom}</p>
           <Infocontact
             nom={nom}
             prenom={prenom}
@@ -111,6 +111,8 @@ const handleSubmit = async (e) => {
             codePostal={codePostal}
             ville={ville}
             Pays={Pays}
+            Tel={Tel}
+            Email={Email}
           />
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2706.335771325818!2d55.500041073706626!3d-21.26411098123294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21787551e03dcbdb%3A0x589065505de775d8!2s200%20Rue%20Emmanuel%20Burel%2C%20Le%20Tampon%2097430%2C%20La%20R%C3%A9union!5e1!3m2!1sfr!2sfr!4v1768206811839!5m2!1sfr!2sfr"

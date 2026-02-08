@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import User from "../components/user";
+
 import Dedale from "../components/dedale";
 
 
-const Home = ({ nom, prenom, adresse, codePostal, Ville, Pays }) => {
+const Home = ({ nom, prenom }) => {
   const [showDedale, setShowDedale] = useState(false); // État pour afficher Dedale
 
   const handleClick = () => {

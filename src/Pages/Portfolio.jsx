@@ -24,6 +24,7 @@ const Portfolio = () => {
               src="./img/foot.jpg"
               className="card-img-top"
               alt="image foot"
+              height="200"
             ></img>
             <div class="card text-center d-flex flex-column h-100 ">
               <div class="card-body d-flex flex-column justify-content-between">
@@ -48,6 +49,7 @@ const Portfolio = () => {
               src="./img/sav.jpg"
               className="card-img-top"
               alt="photo service après vente"
+              height="200"
             ></img>
             <div class="card text-center d-flex flex-column h-100 ">
               <div class="card-body d-flex flex-column justify-content-between">
@@ -71,6 +73,7 @@ const Portfolio = () => {
               src="./img/avatar_Sammy.jpg"
               className="card-img-top"
               alt="mon avatar"
+                  height="200"
             ></img>
             <div class="card text-center d-flex flex-column h-100 ">
               <div class="card-body d-flex flex-column justify-content-between">
@@ -94,6 +97,7 @@ const Portfolio = () => {
               src="./img/PowerBi.jpg"
               className="card-img-top"
               alt="image Power BI"
+                    height="200"
             ></img>
             <div class="card text-center d-flex flex-column h-100 ">
               <div class="card-body d-flex flex-column justify-content-between">
@@ -119,6 +123,7 @@ const Portfolio = () => {
               src="./img/Loyer.jpg"
               className="card-img-top"
               alt="image coder"
+                    height="200"
             ></img>
             <div class="card text-center d-flex flex-column h-100 ">
               <div class="card-body d-flex flex-column justify-content-between">
@@ -141,6 +146,7 @@ const Portfolio = () => {
               src="./img/screens.jpg"
               className="card-img-top"
               alt="image screens"
+                    height="200"
             ></img>
             <div class="card text-center d-flex flex-column h-100 ">
               <div class="card-body d-flex flex-column justify-content-between">

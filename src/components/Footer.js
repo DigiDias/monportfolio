@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "../App.css";
 
 
-const Footer = ({ nom, prenom, adresse, codePostal, ville, Pays }) => {
+const Footer = ({ nom, prenom, adresse, codePostal, ville, Pays, Tel, Email }) => {
   return (
     <footer
       className="footer bg-body-tertiary  d-flex flex-column align-items-center mt-4 w-100 small"
@@ -21,10 +21,10 @@ const Footer = ({ nom, prenom, adresse, codePostal, ville, Pays }) => {
             <p className="mb-1">{ codePostal} {ville} {Pays}</p>
 
             <p className="mb-1">
-              <Link to="tel:0692823999">0692 82 39 99</Link>
+              <Link to={`tel:${Tel}`}>{Tel}</Link>
             </p>
             <p className="mb-1">
-              <Link to="mailto:sammy.gouljiar@gmail.com">sammy.gouljiar@digidias.re</Link>
+              <Link to={`mailto:${Email}`}>{Email}</Link>
             </p>
           </address>
            </section>

@@ -25,14 +25,16 @@ function App() {
       adresse: "200 rue Emmanuel Burel Trois Mares",
       codePostal : "97430",
       ville : "le Tampon",
-      Pays : "Réunion"
+      Pays : "Réunion", 
+      Tel :  "0692 82 39 99",
+      Email : "sammy.gouljiar@digidias.re",
     };
 
 
   
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar {...userData } />
             <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home {...userData}/>} />

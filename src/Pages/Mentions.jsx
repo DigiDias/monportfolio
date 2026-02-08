@@ -3,9 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Infocontact from "../components/infocontact";
-import User from "../components/user";
 
-const Mentions = ({ nom, prenom, adresse, codePostal, Ville, Pays }) => {
+
+const Mentions = ({ nom, prenom, adresse, codePostal, Ville, Pays, Tel, Email }) => {
   return (
     <main style={{ paddingTop: "100px" }}>
       <div className="center">
@@ -41,7 +41,10 @@ const Mentions = ({ nom, prenom, adresse, codePostal, Ville, Pays }) => {
                  adresse={adresse}
                  codePostal={codePostal}
                  ville={Ville}
-                 Pays={Pays}/>
+                 Pays={Pays}
+                 Tel={Tel}
+                 Email={Email}
+                 />
             </div>
           </div>
         </div>
@@ -93,7 +96,7 @@ const Mentions = ({ nom, prenom, adresse, codePostal, Ville, Pays }) => {
             <div className="accordion-body">
               <strong>Crédits</strong>
               <p>
-                Ce site à été réalisé par <User />, étudiant au{" "}
+                Ce site à été réalisé par {prenom} {nom}, étudiant au{" "}
                 <a
                   href="https://www.centre-europeen-formation.fr/"
                   target="_blank"

@@ -1,12 +1,12 @@
 import React from "react";
 
-import { NavLink } from "react-router-dom"; // ✅ Correction de l'importation
+import { NavLink } from "react-router-dom"; // 
 import "../styles/navbar-footer.scss";
-import User from "./user";
 
-const Navbar = () => {
 
-  // 🔽 Ferme le menu burger après clic
+const Navbar = ({ prenom, nom }) => {
+
+  //  Ferme le menu burger après clic
   const closeMenu = () => {
     const menu = document.getElementById("navbarNavAltMarkup");
     if (menu && menu.classList.contains("show")) {
@@ -21,7 +21,7 @@ const Navbar = () => {
     >
       <div className="container-fluid text-uppercase">
         <a className="navbar-brand" href="/" onClick={closeMenu}>
-          <User />
+          {prenom} {nom}
         </a>
         <button
           className="navbar-toggler"

@@ -2,9 +2,11 @@ import { Link } from "react-router-dom";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 import "../App.css";
 
-const Infocontact = ({ nom, prenom, adresse, codePostal, ville, Pays }) => {
+// composant parent
+const Infocontact = ({ adresse, codePostal, ville, Pays, Tel, Email }) => {
   return (
     <address className="infoContact">
       <p>
@@ -15,13 +17,13 @@ const Infocontact = ({ nom, prenom, adresse, codePostal, ville, Pays }) => {
       </p>
 
       <p>
-        <Link to="tel:0692823999">
-          <i className="bi bi-phone"></i> 0692 82 39 99
+        <Link to={`tel:${Tel}`}>
+          <i className="bi bi-phone"></i> {Tel}
         </Link>
       </p>
       <p>
-        <Link to="mailto:sammy.gouljiar@gmail.com">
-          <i className="bi bi-envelope-at"></i> sammy.gouljiar@digidias.re
+        <Link to={`mailto:${Email}`}>
+          <i className="bi bi-envelope-at"></i> {Email}
         </Link>
       </p>
     </address>
