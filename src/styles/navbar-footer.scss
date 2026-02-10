@@ -51,3 +51,15 @@ i:hover {
     font-size: 0.7rem;   /* très petit */
   line-height: 1.2;   /* lignes serrées */
 }
+
+.back-home::after {
+content:"";
+margin-left: 10px;
+
+}
+
+.back-home:hover::after {
+  content: "Retour à l'accueil ";
+  font-size: 0.7em;
+  color: yellowgreen;
+}

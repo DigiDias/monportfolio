@@ -18,14 +18,22 @@ const Contact = ({ nom, prenom, adresse, codePostal, ville, Pays, Tel, Email }) 
 
 const handleSubmit = async (e) => {
   e.preventDefault();
+  const tel = telephone.replace(/\D/g, "");
 
   const data = {
     nom: nomF,
     email,
-    telephone,
+    telephone: tel,
     sujet,
     message,
   };
+
+    if (tel.length !== 10) {
+      setMessageStatus("Le numéro de téléphone doit comporter 10 chiffres.");
+      setIsError(true);
+      return;
+    }
+
 
   try {
     const response = await fetch("/api/mail/send", {
@@ -36,6 +44,8 @@ const handleSubmit = async (e) => {
       body: JSON.stringify(data),
     });
 
+  
+
     const result = await response.json();
     console.log("Réponse serveur :", result);
     setMessageStatus("Message envoyé avec succès !");
@@ -45,6 +55,14 @@ const handleSubmit = async (e) => {
     setMessageStatus("Erreur lors de l'envoi du message.");
      setIsError(true);
   }
+
+
+  
+};
+
+const handleChangeTelephone = (e) => {
+  const value = e.target.value.replace(/\D/g, "");
+  setTelephone(value);
 };
 
   return (
@@ -74,16 +92,22 @@ const handleSubmit = async (e) => {
 />
 
 
-          <input type="text" placeholder="Votre adresse mail"  id="email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
+          <input type="email" placeholder="Votre adresse mail"  id="email" value={email} onChange={(e) => setEmail(e.target.value)} 
+          required
+          ></input>
           <input
-            type="text"
+            type="tel"
             placeholder="Votre numero de telephone"
         
             id="telephone"
             value={telephone}
-            onChange={(e) => setTelephone(e.target.value)}
+            onChange={handleChangeTelephone}
+            inputMode="numeric"
+            maxLength={10}
+            required
+            
           ></input>
-          <input type="text" placeholder="Sujet" id="sujet" value={sujet} onChange={(e) => setSujet(e.target.value)}></input>
+          <input type="text" placeholder="Sujet" id="sujet" value={sujet} onChange={(e) => setSujet(e.target.value)} required></input>
 
           <textarea placeholder="Votre message"  id="message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
           <button type="submit" className="btn btn-primary align-self-center">
