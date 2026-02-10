@@ -1,8 +1,6 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/navbar-footer.scss";
 import { Link } from "react-router-dom";
-import "../App.css";
+
 
 
 const Footer = ({ nom, prenom, adresse, codePostal, ville, Pays, Tel, Email }) => {
@@ -14,7 +12,7 @@ const Footer = ({ nom, prenom, adresse, codePostal, ville, Pays, Tel, Email }) =
       <section className="d-flex justify-content-evenly flex-wrap w-100 p-4 border-bottom border-secondary-subtle mb-1 fst-italic">
         <section className="col-md-4 col-sm-12 mb-3 text-md-start text-center px-3">
           <p className="footer-title">
-           <a href="/" className=" back-home">{prenom} {nom}</a>
+           <a href="/" className="back-home">{prenom} {nom}</a>
           </p>
           <address className="lh-sm">
             <p className="mb-1">{adresse}</p>
