@@ -1,21 +1,20 @@
+import "./styles/navbar-footer.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import "./styles/navbar-footer.scss";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import ScrollToTop  from "./components/ScollTopTop.jsx";
 
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./Pages/Home";
-import Services from "./Pages/Services";
-import Portfolio from "./Pages/Portfolio";
-import Contact from "./Pages/Contact";
-import Mentions from "./Pages/Mentions";
-import SAV from "./Pages/SAV";  
-import PowerBi from "./Pages/PowerBI";  
-import Holding from "./Pages/Holding";
+import Navbar from "./components/Navbar.js";
+import Footer from "./components/Footer.js";
+import Home from "./Pages/Home.jsx";
+import Services from "./Pages/Services.jsx";
+import Portfolio from "./Pages/Portfolio.jsx";
+import Contact from "./Pages/Contact.jsx";
+import Mentions from "./Pages/Mentions.jsx";
+import SAV from "./Pages/SAV.jsx";  
+import PowerBi from "./Pages/PowerBI.jsx";  
+import Holding from "./Pages/Holding.jsx";
 
 
 function App() {

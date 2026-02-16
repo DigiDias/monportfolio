@@ -89,6 +89,7 @@ const handleChangeTelephone = (e) => {
     
     setNomF(e.target.value);
   }}
+  required
 />
 
 
@@ -109,7 +110,7 @@ const handleChangeTelephone = (e) => {
           ></input>
           <input type="text" placeholder="Sujet" id="sujet" value={sujet} onChange={(e) => setSujet(e.target.value)} required></input>
 
-          <textarea placeholder="Votre message"  id="message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+          <textarea placeholder="Votre message"  id="message" value={message} onChange={(e) => setMessage(e.target.value)} required></textarea>
           <button type="submit" className="btn btn-primary align-self-center">
             Envoyer
           </button>
