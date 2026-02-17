@@ -1,118 +1,150 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState } from "react";
 import "../App.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
 import Infocontact from "../components/infocontact";
 
+const Mentions = ({
+  nom,
+  prenom,
+  adresse,
+  codePostal,
+  Ville,
+  Pays,
+  Tel,
+  Email,
+}) => {
+  const [openItems, setOpenItems] = useState([]);
 
-const Mentions = ({ nom, prenom, adresse, codePostal, Ville, Pays, Tel, Email }) => {
+  const toggleItem = (index) => {
+    setOpenItems((prev) =>
+      prev.includes(index)
+        ? prev.filter((item) => item !== index)
+        : [...prev, index]
+    );
+  };
+
   return (
     <main style={{ paddingTop: "100px" }}>
       <div className="center">
         <h2 className="title-h2 fw-semibold">Mentions légales</h2>
-
-        <hr></hr>
+        <hr />
       </div>
-      <div className="accordion" id="accordionPanelsStayOpenExample">
+
+      <div className="accordion">
+
+        {/* ÉDITEUR */}
         <div className="accordion-item">
           <h2 className="accordion-header">
             <button
-              className="accordion-button"
+              className={`accordion-button ${
+                openItems.includes(1) ? "" : "collapsed"
+              }`}
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseOne"
-              aria-expanded="true"
-              aria-controls="panelsStayOpen-collapseOne"
+              onClick={() => toggleItem(1)}
             >
               Editeur du site
             </button>
           </h2>
+
           <div
-            id="panelsStayOpen-collapseOne"
-            className="accordion-collapse collapse show"
+            className={`accordion-collapse collapse ${
+              openItems.includes(1) ? "show" : ""
+            }`}
           >
             <div className="accordion-body">
               <strong>
                 {prenom} {nom}
               </strong>
-              <Infocontact 
-                 nom={nom}
-                 prenom={prenom}
-                 adresse={adresse}
-                 codePostal={codePostal}
-                 ville={Ville}
-                 Pays={Pays}
-                 Tel={Tel}
-                 Email={Email}
-                 />
+              <Infocontact
+                nom={nom}
+                prenom={prenom}
+                adresse={adresse}
+                codePostal={codePostal}
+                ville={Ville}
+                Pays={Pays}
+                Tel={Tel}
+                Email={Email}
+              />
             </div>
           </div>
         </div>
+
+        {/* HÉBERGEUR */}
         <div className="accordion-item">
           <h2 className="accordion-header">
             <button
-              className="accordion-button collapsed"
+              className={`accordion-button ${
+                openItems.includes(2) ? "" : "collapsed"
+              }`}
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseTwo"
-              aria-expanded="false"
-              aria-controls="panelsStayOpen-collapseTwo"
+              onClick={() => toggleItem(2)}
             >
-              Hébérgeur
+              Hébergeur
             </button>
           </h2>
+
           <div
-            id="panelsStayOpen-collapseTwo"
-            className="accordion-collapse collapse"
+            className={`accordion-collapse collapse ${
+              openItems.includes(2) ? "show" : ""
+            }`}
           >
             <div className="accordion-body">
               <strong>OVH</strong>
               <p>
-                <address>2, rue Kellermann, 59100 Roubaix </address>
+                <address>
+                  2, rue Kellermann, 59100 Roubaix
+                </address>
               </p>
-              <a href="https://www.ovhcloud.com/fr/" target="_blank">
+              <a
+                href="https://www.ovhcloud.com/fr/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 https://www.ovhcloud.com/fr/
               </a>
             </div>
           </div>
         </div>
+
+        {/* CRÉDITS */}
         <div className="accordion-item">
           <h2 className="accordion-header">
             <button
-              className="accordion-button collapsed"
+              className={`accordion-button ${
+                openItems.includes(3) ? "" : "collapsed"
+              }`}
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseThree"
-              aria-expanded="false"
-              aria-controls="panelsStayOpen-collapseThree"
+              onClick={() => toggleItem(3)}
             >
               Crédits
             </button>
           </h2>
+
           <div
-            id="panelsStayOpen-collapseThree"
-            className="accordion-collapse collapse"
+            className={`accordion-collapse collapse ${
+              openItems.includes(3) ? "show" : ""
+            }`}
           >
             <div className="accordion-body">
               <strong>Crédits</strong>
               <p>
-                Ce site à été réalisé par {prenom} {nom}, étudiant au{" "}
+                Ce site a été réalisé par {prenom} {nom}, étudiant au{" "}
                 <a
                   href="https://www.centre-europeen-formation.fr/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Centre Européen de la formation
                 </a>
               </p>
               <p>
-                <italic>
-                  Les images utilisées sur ce site sont libres de droits 
-                </italic>
+                <em>
+                  Les images utilisées sur ce site sont libres de droits
+                </em>
               </p>
-            
             </div>
           </div>
         </div>
+
       </div>
     </main>
   );
