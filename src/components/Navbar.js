@@ -1,28 +1,50 @@
-import React from "react";
-
-import { NavLink } from "react-router-dom"; // 
+import { useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
+import { Collapse } from "bootstrap";
 import "../styles/navbar-footer.scss";
 
-
 const Navbar = ({ prenom, nom }) => {
+  const menuRef = useRef(null);
 
-  //  Ferme le menu burger après clic
   const closeMenu = () => {
-    const menu = document.getElementById("navbarNavAltMarkup");
-    if (menu && menu.classList.contains("show")) {
-      menu.classList.remove("show");
+    if (menuRef.current) {
+      const bsCollapse = Collapse.getInstance(menuRef.current);
+      if (bsCollapse) {
+        bsCollapse.hide();
+      }
     }
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target)
+      ) {
+        const bsCollapse = Collapse.getInstance(menuRef.current);
+        if (bsCollapse) {
+          bsCollapse.hide();
+        }
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <nav
-      className="navbar fixed-top navbar-expand-lg bg-body-tertiary navbar bg-primary"
+      className="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-primary"
       data-bs-theme="dark"
     >
       <div className="container-fluid text-uppercase">
         <a className="navbar-brand" href="/" onClick={closeMenu}>
           {prenom} {nom}
         </a>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -34,44 +56,38 @@ const Navbar = ({ prenom, nom }) => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+        <div
+          className="collapse navbar-collapse"
+          id="navbarNavAltMarkup"
+          ref={menuRef}
+        >
           <div className="navbar-nav">
-            <NavLink className="nav-link"  to="/" onClick={closeMenu}>
+            <NavLink className="nav-link" to="/" onClick={closeMenu}>
               Home
             </NavLink>
-            <NavLink
-              className="nav-link"
-              to="/services"
-        onClick={closeMenu}
-             
-            >
+
+            <NavLink className="nav-link" to="/services" onClick={closeMenu}>
               Services
             </NavLink>
-            <NavLink
-              className="nav-link"
-              to="/portfolio"
-          onClick={closeMenu}
-            >
+
+            <NavLink className="nav-link" to="/portfolio" onClick={closeMenu}>
               Portfolio
             </NavLink>
-        <NavLink
-  to="/contact"
-onClick={closeMenu}
-  className={({ isActive }) =>
-    `nav-link ${isActive ? "active" : ""}`
-  }
->
-  Contact
-</NavLink>
+
             <NavLink
-              className="nav-link"
-              to="/mentions"
-    onClick={closeMenu}
+              to="/contact"
+              onClick={closeMenu}
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
             >
-              Mentions Légales
+              Contact
             </NavLink>
 
-        
+            <NavLink className="nav-link" to="/mentions" onClick={closeMenu}>
+              Mentions Légales
+            </NavLink>
           </div>
         </div>
       </div>
