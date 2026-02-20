@@ -1,0 +1,7 @@
+.classement {
+    border:2px solid black;
+    margin-top: 2em;
+    background: linear-gradient(rgb(205, 255, 192), rgb(0, 96, 128));
+    color:white;
+    border-radius: 10px;
+}

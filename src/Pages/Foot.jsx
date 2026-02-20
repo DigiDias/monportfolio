@@ -1,0 +1,101 @@
+import {useEffect, useState} from "react";
+import "./Foot.css";
+
+const Foot = () => {
+  const [data, setData] = useState([]);
+  const [matches, setMatches] = useState([]);
+  const [loading, setloading] = useState(true);
+
+
+
+//compossant UseEffect pour la route foot
+
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const response = await fetch("/api/foot/getFoot");
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error("Erreur lors de la récupération des données");
+      }
+      setData(data.standing);
+        setloading(false);
+    } catch (error) {
+      console.error("Erreur lors de la récupération des données :", error);
+    }
+  };
+  fetchData();
+}, []);
+   
+
+  //compossant UseEffect pour la route matchs
+  useEffect(() => {
+    const fetchMatches = async () => {
+      try {
+        const response = await fetch("/api/foot/getMatches");
+        const data = await response.json();
+        if (!response.ok) {
+          throw new Error("Erreur lors de la récupération des données");
+        }
+        setMatches(data.data.events);
+        console.log(data.data.events);
+      } catch (error) {
+        console.error("Erreur lors de la récupération des données :", error);
+      } 
+    };
+    fetchMatches();
+  }
+  , []);
+
+  return (
+    <div className="d-flex flex-column align-items-center justify-content-center">
+      <h1 className="text-center fw-bold classement">Classement de la ligue 1 au {new Date().toLocaleDateString()}</h1>
+
+      <a href="https://www.maxifoot.fr/resultat-ligue-1-france.htm" target="_blank" rel="noopener noreferrer" className="btn btn-primary mb-3">Voir les résultats</a>
+   
+      {/* Affichez les données récupérées ici */}
+
+    {loading ? (
+        <p>Chargement en cours...</p>
+      ) : (
+        <table className="table table-striped  table-bordered  table-hover w-auto border border-2 border-dark">
+        <thead>
+          <tr>
+            <th className="text-center w-auto">Rank</th>
+            <th className="text-center w-auto">Équipe</th>
+            <th className="text-center w-auto">Points</th>
+          
+         
+            
+          </tr>
+        </thead>
+<tbody>
+  {data?.map((d, index) => {
+    console.log("Couleur :", d.color);
+
+    return (
+      <tr
+        key={index}
+        
+      >
+        <td className="text-center" style={{ backgroundColor: d.color ?? "transparent" }}>{d.rank}</td>
+        <td style={{ backgroundColor: d.color ?? "transparent" }}>{d.team}</td>
+        <td className="text-center"style={{ backgroundColor: d.color ?? "transparent" }}>{d.points}</td>
+    
+      </tr>
+    );
+  })}
+</tbody>
+      </table>
+      )}
+
+
+  
+    
+
+    </div>
+  );
+};
+
+export default Foot;

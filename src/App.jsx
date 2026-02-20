@@ -7,7 +7,7 @@ import ScrollToTop  from "./components/ScollTopTop.jsx";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.js";
-import Footer from "./components/Footer.js";
+import Footer from "./components/Footer.jsx";
 import Home from "./Pages/Home.jsx";
 import Services from "./Pages/Services.jsx";
 import Portfolio from "./Pages/Portfolio.jsx";
@@ -16,6 +16,7 @@ import Mentions from "./Pages/Mentions.jsx";
 import SAV from "./Pages/SAV.jsx";  
 import PowerBi from "./Pages/PowerBI.jsx";  
 import Holding from "./Pages/Holding.jsx";
+import Foot from "./Pages/Foot.jsx";
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Route path="/sav" element={<SAV />} />
         <Route path="/powerbi" element={<PowerBi />} />
         <Route path="/holding" element={<Holding />} />
+        <Route path="/foot" element={<Foot />} />
       </Routes>
       <Footer {...userData}/>
     </BrowserRouter>

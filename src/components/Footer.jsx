@@ -70,6 +70,9 @@ const Footer = ({ nom, prenom, adresse, codePostal, ville, Pays, Tel, Email }) =
           <Link className="nav-link text-primary " to="https://www.figma.com/design/av8Vhqj53KHlC3Ck8UgFVB/Devoir-4-Figma?node-id=48-12&p=f&t=1mQPdjHJ8UTka2VP-0" target="_blank">
             Maquette d'un site Web
           </Link>
+                    <Link className="nav-link text-primary " to="/foot">
+            API vers le classement de la ligue 1
+          </Link>
         </section>
 
         </section>
