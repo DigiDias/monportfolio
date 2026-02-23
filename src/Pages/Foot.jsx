@@ -29,24 +29,7 @@ useEffect(() => {
 }, []);
    
 
-  //compossant UseEffect pour la route matchs
-  useEffect(() => {
-    const fetchMatches = async () => {
-      try {
-        const response = await fetch("/api/foot/getMatches");
-        const data = await response.json();
-        if (!response.ok) {
-          throw new Error("Erreur lors de la récupération des données");
-        }
-        setMatches(data.data.events);
-        console.log(data.data.events);
-      } catch (error) {
-        console.error("Erreur lors de la récupération des données :", error);
-      } 
-    };
-    fetchMatches();
-  }
-  , []);
+
 
   return (
     <div className="d-flex flex-column align-items-center justify-content-center">
