@@ -17,7 +17,7 @@ const Gallery = () => {
 </h2>
 
 <article className="text-start mb-5 p-4 bg-light rounded shadow-sm">
-  <p className="fs-5 fw-semibold mb-3">
+  <p className="fs-5 fw-semibold mb-3 text-center">
     Mise en place d’une application web permettant de centraliser et d’accéder facilement aux
     différents rapports Power BI du groupe à travers un tableau de bord dédié.
   </p>

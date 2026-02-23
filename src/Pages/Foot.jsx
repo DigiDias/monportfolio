@@ -65,6 +65,10 @@ useEffect(() => {
             <th className="text-center w-auto">Rank</th>
             <th className="text-center w-auto">Équipe</th>
             <th className="text-center w-auto">Points</th>
+            <th className="text-center w-auto">Journée</th>
+            <th className="text-center w-auto">Diff</th>
+    
+          
           
          
             
@@ -79,9 +83,15 @@ useEffect(() => {
         key={index}
         
       >
-        <td className="text-center" style={{ backgroundColor: d.color ?? "transparent" }}>{d.rank}</td>
-        <td style={{ backgroundColor: d.color ?? "transparent" }}>{d.team}</td>
+        
+        <td className="text-center d-flex justify-content-between" style={{ backgroundColor: d.color ?? "transparent" }}><img src={d.logo} alt={d.team} className="img-fluid" style={{width:20, height:20}}/>  {d.rank}</td>
+        <td style={{ backgroundColor: d.color ?? "transparent" }}><a href={d.lien} target="_blank" rel="noopener noreferrer">{d.team}</a></td>
         <td className="text-center"style={{ backgroundColor: d.color ?? "transparent" }}>{d.points}</td>
+        <td className="text-center"style={{ backgroundColor: d.color ?? "transparent" }}>{d.journee}</td>
+        <td className="text-center"style={{ backgroundColor: d.color ?? "transparent" }}>{d.difference}</td>
+
+            
+
     
       </tr>
     );

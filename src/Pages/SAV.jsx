@@ -17,7 +17,7 @@ const Gallery = () => {
 </h2>
 
 <article className="text-start mb-5 p-4 bg-light rounded shadow-sm">
-  <p className="fs-5 fw-semibold mb-3">
+  <p className="fs-5 fw-semibold mb-3 text-center">
     Application web full-stack conçue pour la gestion et le suivi d’interventions SAV.
   </p>
 

@@ -18,7 +18,7 @@ const Gallery = () => {
   </h2>
 
   <article className="text-start mb-5 p-4 bg-light rounded shadow-sm">
-    <p className="fs-5 fw-semibold mb-3">
+    <p className="fs-5 fw-semibold mb-3 text-center">
       Développement d’une application web de gestion locative destinée à une SCI,
       permettant la centralisation des loyers, des informations immobilières,
       des gérants ainsi que l’automatisation de plusieurs processus administratifs.
