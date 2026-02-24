@@ -68,7 +68,7 @@ useEffect(() => {
       >
         
         <td className="text-center d-flex justify-content-between" style={{ backgroundColor: d.color ?? "transparent" }}><img src={d.logo} alt={d.team} className="img-fluid" style={{width:20, height:20}}/>  {d.rank}</td>
-        <td style={{ backgroundColor: d.color ?? "transparent" }}><a href={d.lien} target="_blank" rel="noopener noreferrer">{d.team}</a></td>
+        <td style={{ backgroundColor: d.color ?? "transparent" }}><a href={d.lien} target="_blank" rel="noopener noreferrer">{d.team === "Paris Saint-Germain" ? "PSG" : d.team}</a></td>
         <td className="text-center"style={{ backgroundColor: d.color ?? "transparent" }}>{d.points}</td>
         <td className="text-center"style={{ backgroundColor: d.color ?? "transparent" }}>{d.journee}</td>
         <td className="text-center"style={{ backgroundColor: d.color ?? "transparent" }}>{d.difference}</td>
