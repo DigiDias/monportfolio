@@ -3,7 +3,7 @@ import "./Foot.css";
 
 const Foot = () => {
   const [data, setData] = useState([]);
-  const [matches, setMatches] = useState([]);
+
   const [loading, setloading] = useState(true);
 
 

@@ -3,12 +3,16 @@ import cors from "cors";
 import dotenv from "dotenv";
 import mailRoute from "./routes/mailRoute.js";
 import footRoute from "./routes/footRoutes.js";
+import helmet from "helmet";
 
 dotenv.config();
 
 
 const app = express();
 
+
+app.use(helmet());
+app.disable("x-powered-by");
 app.use(cors());
 app.use(express.json());
 app.use("/api/mail", mailRoute);

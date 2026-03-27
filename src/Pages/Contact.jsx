@@ -1,9 +1,9 @@
 import {useState} from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../App.css";
+
+
 
 import Infocontact from "../components/infocontact";
-import "bootstrap/dist/js/bootstrap.bundle.min";
+
 
 const Contact = ({ nom, prenom, adresse, codePostal, ville, Pays, Tel, Email }) => {
 

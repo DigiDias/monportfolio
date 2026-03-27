@@ -17,6 +17,7 @@ import SAV from "./Pages/SAV.jsx";
 import PowerBi from "./Pages/PowerBI.jsx";  
 import Holding from "./Pages/Holding.jsx";
 import Foot from "./Pages/Foot.jsx";
+import Tva from "./Pages/Tva.jsx";
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
         <Route path="/powerbi" element={<PowerBi />} />
         <Route path="/holding" element={<Holding />} />
         <Route path="/foot" element={<Foot />} />
+        <Route path="/tva" element={<Tva />} />
       </Routes>
       <Footer {...userData}/>
     </BrowserRouter>
