@@ -11,7 +11,15 @@ dotenv.config();
 const app = express();
 
 
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        frameAncestors: ["'none'"], 
+      },
+    },
+  })
+);
 app.disable("x-powered-by");
 app.use(cors());
 app.use(express.json());
