@@ -58,7 +58,7 @@ const Tva = () => {
     </div>
 
 <div>
-    <iframe src="https://www.digidias.re"></iframe>
+    <iframe src="https://time.is/fr/"></iframe>
 </div>
 
     </div>

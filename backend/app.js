@@ -15,7 +15,7 @@ app.use(
   helmet({
     contentSecurityPolicy: {
       directives: {
-        ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+        defaultSrc: ["'self'"],
         frameAncestors: ["'none'"],
       },
     },
