@@ -186,8 +186,10 @@ const Home = ({ nom, prenom }) => {
         
         autoPlay
         loop
+        muted
+          playsInline
+  controls
         
-        style={{ objectFit: "cover", height: "400px", width: "70%" }}
       >
         <source src="/videos/IA_Digidias.mp4" type="video/mp4" />
         Votre navigateur ne supporte pas la vidéo.

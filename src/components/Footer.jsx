@@ -2,9 +2,16 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-
-
-const Footer = ({ nom, prenom, adresse, codePostal, ville, Pays, Tel, Email }) => {
+const Footer = ({
+  nom,
+  prenom,
+  adresse,
+  codePostal,
+  ville,
+  Pays,
+  Tel,
+  Email,
+}) => {
   return (
     <footer
       className="footer bg-body-tertiary  d-flex flex-column align-items-center mt-4 w-100 small"
@@ -13,11 +20,15 @@ const Footer = ({ nom, prenom, adresse, codePostal, ville, Pays, Tel, Email }) =
       <section className="d-flex justify-content-evenly flex-wrap w-100 p-4 border-bottom border-secondary-subtle mb-1 fst-italic">
         <section className="col-md-4 col-sm-12 mb-3 text-md-start text-center px-3">
           <p className="footer-title">
-           <a href="/" className="back-home">{prenom} {nom}</a>
+            <a href="/" className="back-home">
+              {prenom} {nom}
+            </a>
           </p>
           <address className="lh-sm">
             <p className="mb-1">{adresse}</p>
-            <p className="mb-1">{ codePostal} {ville} {Pays}</p>
+            <p className="mb-1">
+              {codePostal} {ville} {Pays}
+            </p>
 
             <p className="mb-1">
               <Link to={`tel:${Tel}`}>{Tel}</Link>
@@ -26,9 +37,7 @@ const Footer = ({ nom, prenom, adresse, codePostal, ville, Pays, Tel, Email }) =
               <Link to={`mailto:${Email}`}>{Email}</Link>
             </p>
           </address>
-           </section>
-     
-       
+        </section>
 
         <section className="col-md-4 col-sm-12 mb-3 text-md-start text-center px-3 w-33">
           <p className="footer-title">Lien utiles</p>
@@ -52,55 +61,69 @@ const Footer = ({ nom, prenom, adresse, codePostal, ville, Pays, Tel, Email }) =
           <p className="footer-title text-nowrap ">
             Mes dernieres réalisations
           </p>
-          <Link className="nav-link text-primary " to="https://ravatefoot.onrender.com/" target="_blank">
+          <Link
+            className="nav-link text-primary "
+            to="https://ravatefoot.onrender.com/"
+            target="_blank"
+          >
             Championnat de Football
           </Link>
           <Link className="nav-link text-primary " to="/SAV">
             Service aprés-vente
           </Link>
-          <Link className="nav-link text-primary " to="https://digidias.onrender.com/" target="_blank">
+          <Link
+            className="nav-link text-primary "
+            to="https://digidias.onrender.com/"
+            target="_blank"
+          >
             Curriculum Vitae
           </Link>
           <Link className="nav-link text-primary " to="/powerbi">
-           Tableaux de Bord Power BI Intégrés
+            Tableaux de Bord Power BI Intégrés
           </Link>
           <Link className="nav-link text-primary " to="/holding">
-           Gestion de SCI
+            Gestion de SCI
           </Link>
-          <Link className="nav-link text-primary " to="https://www.figma.com/design/av8Vhqj53KHlC3Ck8UgFVB/Devoir-4-Figma?node-id=48-12&p=f&t=1mQPdjHJ8UTka2VP-0" target="_blank">
+          <Link
+            className="nav-link text-primary "
+            to="https://www.figma.com/design/av8Vhqj53KHlC3Ck8UgFVB/Devoir-4-Figma?node-id=48-12&p=f&t=1mQPdjHJ8UTka2VP-0"
+            target="_blank"
+          >
             Maquette d'un site Web
           </Link>
-                    <Link className="nav-link text-primary " to="/foot">
+          <Link className="nav-link text-primary " to="/foot">
             API vers le classement de la ligue 1
           </Link>
+          <Link className="nav-link text-primary " to="/tva">
+            Calculateur de TVA
+          </Link>
         </section>
+      </section>
 
-        </section>
+      <div className="icones d-flex align-items-center gap-3 ">
+        <a
+          href="https://github.com/DigiDias"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <i class="bi bi-github"></i>
+        </a>
 
-             <div className="icones d-flex align-items-center gap-3 ">
-            <a
-              href="https://github.com/DigiDias"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-            >
-              <i class="bi bi-github"></i>
-            </a>
-           
-            <a
-              href="https://www.linkedin.com/in/sammy-gouljiar-a9057b2b7"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-            >
-              <i class="bi bi-linkedin"></i>
-            </a>
-          </div>
+        <a
+          href="https://www.linkedin.com/in/sammy-gouljiar-a9057b2b7"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <i class="bi bi-linkedin"></i>
+        </a>
+      </div>
 
-         <div>
-  <p>
-    &copy; {new Date().getFullYear()} {prenom} {nom} - Tous droits réservés.
-  </p>
-</div>
-      
+      <div>
+        <p>
+          &copy; {new Date().getFullYear()} {prenom} {nom} - Tous droits
+          réservés.
+        </p>
+      </div>
     </footer>
   );
 };
