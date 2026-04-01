@@ -17,7 +17,7 @@ const Tva = () => {
   }
 
   return (
-    <div>
+   
     <div
       className="d-flex flex-column justify-content-center align-items-center w-100 "
       style={{ paddingTop: "100px" }}
@@ -54,13 +54,8 @@ const Tva = () => {
         </div>
       )}
 
-      
-    </div>
-
-<iframe src="https://www.maxifoot.fr/"></iframe>
-
-
-    </div>
+      </div>
+  
   );
 };
 

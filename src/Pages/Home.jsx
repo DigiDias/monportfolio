@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
 import "../assets/home.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 
 import Dedale from "../components/dedale";
 
@@ -189,7 +189,7 @@ const Home = ({ nom, prenom }) => {
         muted
           playsInline
   controls
-        
+        style={{width:"100%"}} 
       >
         <source src="/videos/IA_Digidias.mp4" type="video/mp4" />
         Votre navigateur ne supporte pas la vidéo.

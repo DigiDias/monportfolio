@@ -32,9 +32,10 @@ useEffect(() => {
 
 
   return (
-    <div className="d-flex flex-column align-items-center justify-content-center">
+    <div className="d-flex flex-column px-4 ">
       <h1 className="text-center fw-bold classement">Classement de la ligue 1 au {new Date().toLocaleDateString()}</h1>
-
+      <div className="d-flex flex-column flex-md-row gap-4 justify-content-between">
+<div className="d-flex flex-column ">
       <a href="https://www.maxifoot.fr/resultat-ligue-1-france.htm" target="_blank" rel="noopener noreferrer" className="btn btn-primary mb-3">Voir les résultats</a>
    
       {/* Affichez les données récupérées ici */}
@@ -82,8 +83,16 @@ useEffect(() => {
 </tbody>
       </table>
       )}
+      </div>
 
 
+ <div className="d-flex flex-column " style={{flex: 1}}>
+    <p className="btn btn-primary mb-3">Actualités</p>
+
+    <iframe src="https://www.maxifoot.fr/" className="w-100" style={{ height: "600px" }} ></iframe>
+
+    </div>
+    </div>
   
     
 

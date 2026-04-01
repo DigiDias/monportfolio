@@ -1,14 +1,19 @@
-import {useState} from "react";
-
-
+import { useState } from "react";
 
 import Infocontact from "../components/infocontact";
 
-
-const Contact = ({ nom, prenom, adresse, codePostal, ville, Pays, Tel, Email }) => {
-
-  
+const Contact = ({
+  nom,
+  prenom,
+  adresse,
+  codePostal,
+  ville,
+  Pays,
+  Tel,
+  Email,
+}) => {
   const [nomF, setNomF] = useState("");
+  const [prenomF, setPrenomF] = useState("");
   const [sujet, setSujet] = useState("");
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
@@ -16,17 +21,22 @@ const Contact = ({ nom, prenom, adresse, codePostal, ville, Pays, Tel, Email }) 
   const [messageStatus, setMessageStatus] = useState(null);
   const [isError, setIsError] = useState(false);
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  const tel = telephone.replace(/\D/g, "");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const tel = telephone.replace(/\D/g, "");
 
-  const data = {
-    nom: nomF,
-    email,
-    telephone: tel,
-    sujet,
-    message,
-  };
+    const data = {
+      nom: nomF,
+      prenomF,
+      email,
+      telephone: tel,
+      sujet,
+      message,
+    };
+
+  
+
+ 
 
     if (tel.length !== 10) {
       setMessageStatus("Le numéro de téléphone doit comporter 10 chiffres.");
@@ -34,36 +44,30 @@ const handleSubmit = async (e) => {
       return;
     }
 
+    try {
+      const response = await fetch("/api/mail/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-  try {
-    const response = await fetch("/api/mail/send", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+      const result = await response.json();
+      console.log("Réponse serveur :", result);
+      setMessageStatus("Message envoyé avec succès !");
+      setIsError(false);
+    } catch (error) {
+      console.error("Erreur envoi :", error);
+      setMessageStatus("Erreur lors de l'envoi du message.");
+      setIsError(true);
+    }
+  };
 
-  
-
-    const result = await response.json();
-    console.log("Réponse serveur :", result);
-    setMessageStatus("Message envoyé avec succès !");
-     setIsError(false);
-  } catch (error) {
-    console.error("Erreur envoi :", error);
-    setMessageStatus("Erreur lors de l'envoi du message.");
-     setIsError(true);
-  }
-
-
-  
-};
-
-const handleChangeTelephone = (e) => {
-  const value = e.target.value.replace(/\D/g, "");
-  setTelephone(value);
-};
+  const handleChangeTelephone = (e) => {
+    const value = e.target.value.replace(/\D/g, "");
+    setTelephone(value);
+  };
 
   return (
     <main style={{ paddingTop: "100px" }}>
@@ -78,57 +82,79 @@ const handleChangeTelephone = (e) => {
       <section className="cont-A d-flex flex-wrap justify-content-center gap-4 p-4 border border-secondary-subtle mt-3 mb-3 shadow-lg bg-white w-90 mx-auto">
         <form onSubmit={handleSubmit} className="cont-A-1">
           <p className="title-app">Formulaire de contact</p>
-<input
-  type="text"
-  placeholder="Votre nom"
+          <input
+            type="text"
+            placeholder="Votre nom"
+            id="nomF"
+            value={nomF}
+            onChange={(e) => {
+              setNomF(e.target.value);
+            }}
+            required
+          />
+          <input
+            type="text"
+            placeholder="Votre prenom"
+            id="prenomF"
+            value={prenomF}
+            onChange={(e) => setPrenomF(e.target.value)}
+            required
+          ></input>
 
-  id="nomF"
-  value={nomF}
-  onChange={(e) => {
-
-    
-    setNomF(e.target.value);
-  }}
-  required
-/>
-
-
-          <input type="email" placeholder="Votre adresse mail"  id="email" value={email} onChange={(e) => setEmail(e.target.value)} 
-          required
+          <input
+            type="email"
+            placeholder="Votre adresse mail"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
           ></input>
           <input
             type="tel"
             placeholder="Votre numero de telephone"
-        
             id="telephone"
             value={telephone}
             onChange={handleChangeTelephone}
             inputMode="numeric"
             maxLength={10}
             required
-            
           ></input>
-          <input type="text" placeholder="Sujet" id="sujet" value={sujet} onChange={(e) => setSujet(e.target.value)} required></input>
+          <input
+            type="text"
+            placeholder="Sujet"
+            id="sujet"
+            value={sujet}
+            onChange={(e) => setSujet(e.target.value)}
+            required
+          ></input>
 
-          <textarea placeholder="Votre message"  id="message" value={message} onChange={(e) => setMessage(e.target.value)} required></textarea>
+          <textarea
+            placeholder="Votre message"
+            id="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            required
+          ></textarea>
           <button type="submit" className="btn btn-primary align-self-center">
             Envoyer
           </button>
 
-{messageStatus && (
-  <div
-    className={`alert ${isError ? "alert-danger" : "alert-success"} mt-3`}
-    role="alert"
-  >
-    {messageStatus}
-  </div>
-)}
+       
 
-          
+          {messageStatus && (
+            <div
+              className={`alert ${isError ? "alert-danger" : "alert-success"} mt-3`}
+              role="alert"
+            >
+              {messageStatus}
+            </div>
+          )}
         </form>
         <article className="cont-A-2">
           <p className="title-app">Mes coordonnées</p>
-          <p>{prenom} {nom}</p>
+          <p>
+            {prenom} {nom}
+          </p>
           <Infocontact
             nom={nom}
             prenom={prenom}

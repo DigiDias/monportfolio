@@ -36,6 +36,7 @@ const Navbar = ({ prenom, nom }) => {
   }, []);
 
   return (
+    <header>
     <nav
       className="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-primary"
       data-bs-theme="dark"
@@ -92,6 +93,7 @@ const Navbar = ({ prenom, nom }) => {
         </div>
       </div>
     </nav>
+    </header>
   );
 };
 

@@ -4,12 +4,14 @@ import mailServices from "../services/mailServices.js";
 
 
 const sendMail = async (req, res) => {
-const { nom, email, telephone, sujet, message } = req.body;
+const { nom, prenomF, email, telephone, sujet, message } = req.body;
     try {
         const result = await mailServices.sendMailMailjet({
       subject: sujet,
       text: message,
-html: `
+      email,
+      html: `
+
   <div style="font-family: Arial, sans-serif; background-color:#f4f4f4; padding:20px;">
     <div style="max-width:600px; margin:auto; background:#ffffff; padding:20px; border-radius:6px;">
       
@@ -34,6 +36,48 @@ html: `
     </div>
   </div>
 `
+    ,
+html2: `
+<div style="font-family: Arial, sans-serif; background-color:#f4f4f4; padding:20px;">
+  <div style="max-width:600px; margin:auto; background:#ffffff; padding:30px; border-radius:8px;">
+
+    <h2 style="color:#333; margin-bottom:20px;">
+      Bonjour ${prenomF},
+    </h2>
+
+    <p style="color:#555; font-size:16px; line-height:1.6;">
+      Nous vous remercions pour votre message.
+    </p>
+
+    <p style="color:#555; font-size:16px; line-height:1.6;">
+      Votre demande a bien été prise en compte et nous reviendrons vers vous dans les plus brefs délais.
+    </p>
+
+    <div style="margin:30px 0; padding:15px; background:#f8f9fa; border-left:4px solid #007bff;">
+      <p style="margin:0; color:#333;">
+        ✔ Demande reçue avec succès
+      </p>
+    </div>
+
+    <p style="color:#555; font-size:16px; line-height:1.6;">
+      Merci pour votre confiance.
+    </p>
+
+    <p style="margin-top:30px; color:#333;">
+      Cordialement,<br/>
+      <strong>L'équipe @Digidias</strong>
+    </p>
+
+    <hr style="margin:30px 0; border:none; border-top:1px solid #eee;" />
+
+    <p style="font-size:12px; color:#999; text-align:center;">
+      Cet email est une confirmation automatique suite à votre demande.
+    </p>
+
+  </div>
+</div>
+`
+
 
     });
         res.status(200).json({ message: "Email envoyé avec succès", data: result });

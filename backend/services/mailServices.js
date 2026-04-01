@@ -1,13 +1,18 @@
-import e from "express";
+
 import Mailjet from "node-mailjet";
 
-export const sendMailMailjet = async ({ subject, text, html }) => {
+export const sendMailMailjet = async ({ subject, text, html, email, html2 }) => {
   try {
     const mj = Mailjet.apiConnect(
       process.env.MJ_APIKEY_PUBLIC,
-      process.env.MJ_APIKEY_PRIVATE,
-      process.env.SMTP_USER
+      process.env.MJ_APIKEY_PRIVATE
+
     );
+
+
+
+  
+    
 
     const formatAddresses = (field) =>
       Array.isArray(field)
@@ -27,9 +32,29 @@ export const sendMailMailjet = async ({ subject, text, html }) => {
           Subject: subject,
           TextPart: text,
           HTMLPart: html
+        },
+
+        {
+          From: {
+            
+            Email: process.env.SMTP_USER,
+            Name: "Contact Site Digidias.re"
+          },
+          To: formatAddresses(email),
+       
+          Subject: "@DIGIDIAS Votre message a bien été reçu !",
+          TextPart: "Nous avons bien reçu votre demande",
+          HTMLPart: html2
         }
+
+        
+
+
+        
       ]
     });
+
+   
 
     const result = await request;
     console.log("✅ Email envoyé :", result.body);
