@@ -176,9 +176,28 @@ const Home = ({ nom, prenom }) => {
                 class="progress-bar bg-secondary"
                 style={{ width: "50%" }}
               ></div>
+
+
+              
             </div>
+
+          <div className="d-flex center">
+    <video
+        
+        autoPlay
+        loop
+        
+        style={{ objectFit: "cover", height: "400px", width: "70%" }}
+      >
+        <source src="/videos/IA_Digidias.mp4" type="video/mp4" />
+        Votre navigateur ne supporte pas la vidéo.
+      </video>
+</div>
+
           </article>
+
         </section>
+
       </main>
     </div>
   );
