@@ -87,7 +87,7 @@ useEffect(() => {
 
 
  <div className="d-flex flex-column " style={{flex: 1}}>
-    <p className="btn btn-primary mb-3">Actualités</p>
+    <p className="bg-primary news mb-3">Actualités</p>
 
     <iframe src="https://www.maxifoot.fr/" className="w-100" style={{ height: "600px" }} ></iframe>
 

@@ -20,6 +20,7 @@ const { nom, prenomF, email, telephone, sujet, message } = req.body;
       </h2>
 
       <p><strong>Nom :</strong> ${nom}</p>
+      <p><strong>Prénom :</strong> ${prenomF}</p>
       <p><strong>Email :</strong> ${email}</p>
       <p><strong>Téléphone :</strong> ${telephone}</p>
       <p><strong>Sujet :</strong> ${sujet}</p>
