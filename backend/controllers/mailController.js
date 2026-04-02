@@ -4,7 +4,7 @@ import mailServices from "../services/mailServices.js";
 
 
 const sendMail = async (req, res) => {
-const { nom, prenomF, email, telephone, sujet, message } = req.body;
+const { nom, prenom, email, telephone, sujet, message } = req.body;
     try {
         const result = await mailServices.sendMailMailjet({
       subject: sujet,
@@ -20,7 +20,7 @@ const { nom, prenomF, email, telephone, sujet, message } = req.body;
       </h2>
 
       <p><strong>Nom :</strong> ${nom}</p>
-      <p><strong>Prénom :</strong> ${prenomF}</p>
+      <p><strong>Prénom :</strong> ${prenom}</p>
       <p><strong>Email :</strong> ${email}</p>
       <p><strong>Téléphone :</strong> ${telephone}</p>
       <p><strong>Sujet :</strong> ${sujet}</p>
@@ -43,7 +43,7 @@ html2: `
   <div style="max-width:600px; margin:auto; background:#ffffff; padding:30px; border-radius:8px;">
 
     <h2 style="color:#333; margin-bottom:20px;">
-      Bonjour ${prenomF},
+      Bonjour ${prenom},
     </h2>
 
     <p style="color:#555; font-size:16px; line-height:1.6;">

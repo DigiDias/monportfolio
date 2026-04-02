@@ -25,17 +25,19 @@ const Contact = ({
     e.preventDefault();
     const tel = telephone.replace(/\D/g, "");
 
+  const prenomMaj = prenomF.charAt(0).toUpperCase() + prenomF.slice(1).toLowerCase();
+  const nomMaj = nomF.charAt(0).toUpperCase() + nomF.slice(1).toLowerCase();
+
     const data = {
-      nom: nomF,
-      prenomF,
+      nom: nomMaj,
+      prenom: prenomMaj,
       email,
       telephone: tel,
       sujet,
       message,
     };
 
-  
-
+console.log("Données à envoyer :", data);
  
 
     if (tel.length !== 10) {
@@ -96,7 +98,7 @@ const Contact = ({
             type="text"
             placeholder="Votre prenom"
             id="prenomF"
-            value={prenomF}
+           value={prenomF}
             onChange={(e) => setPrenomF(e.target.value)}
             required
           ></input>
