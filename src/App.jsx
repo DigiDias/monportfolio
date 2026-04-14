@@ -29,7 +29,7 @@ function App() {
       codePostal : "97430",
       ville : "le Tampon",
       Pays : "Réunion", 
-      Tel :  "0692 82 39 99",
+      Tel :  "06 92 82 39 99",
       Email : "sammy.gouljiar@digidias.re",
     };
 
