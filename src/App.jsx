@@ -18,6 +18,7 @@ import PowerBi from "./Pages/PowerBI.jsx";
 import Holding from "./Pages/Holding.jsx";
 import Foot from "./Pages/Foot.jsx";
 import Tva from "./Pages/Tva.jsx";
+import Dedale from "./components/dedale.js"
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
       Pays : "Réunion", 
       Tel :  "06 92 82 39 99",
       Email : "sammy.gouljiar@digidias.re",
+      site : "https://sammygouljiar.digidias.re"
     };
 
 
@@ -42,7 +44,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home {...userData}/>} />
         <Route path="/services" element={<Services />} />
-        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio" element={<Portfolio {...userData} />} />
         <Route path="/contact" element={<Contact {...userData} />} />
         <Route path="/mentions" element={<Mentions {...userData}/>} />
         <Route path="/sav" element={<SAV />} />
@@ -50,8 +52,10 @@ function App() {
         <Route path="/holding" element={<Holding />} />
         <Route path="/foot" element={<Foot />} />
         <Route path="/tva" element={<Tva />} />
+     
       </Routes>
       <Footer {...userData}/>
+        <Dedale {...userData} />
     </BrowserRouter>
   );
 }

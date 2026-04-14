@@ -4,7 +4,7 @@ import "../assets/home.css";
 
 import Dedale from "../components/dedale";
 
-const Home = ({ nom, prenom }) => {
+const Home = ({...userData}) => {
   const [showDedale, setShowDedale] = useState(false); // État pour afficher Dedale
 
   const handleClick = () => {
@@ -20,7 +20,7 @@ const Home = ({ nom, prenom }) => {
       <main className="d-flex flex-column justify-content-center align-items-center w-100 ">
         <div className="home d-flex flex-column align-items-center text-center text-white bg-cover vh-80 w-100 pt-5 mt-5 ">
           <h1 className="home-title-h1 fw-semibold fs-1 animation-name">
-            Bonjour, je suis {prenom} {nom}
+            Bonjour, je suis {userData.prenom} {userData.nom}
           </h1>
           <h2 className="home-title-h2 fw-semibold animation-title">
             Développeur web full stack – React, Node.js, Power BI
@@ -34,7 +34,7 @@ const Home = ({ nom, prenom }) => {
 
           {showDedale && (
             <div className="d-flex flex-column bg-dark">
-              <Dedale />
+           <Dedale {...userData} />
               <button
                 id="btnFermer"
                 className="btn btn-danger align-self-center mt-1 mb-1"

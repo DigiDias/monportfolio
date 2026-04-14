@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 
-const Portfolio = () => {
+const Portfolio = ({...userData}) => {
   return (
    <main style={{ paddingTop: "100px" }}>
      
@@ -79,7 +79,7 @@ const Portfolio = () => {
               <div class="card-body d-flex flex-column justify-content-between">
                 <h5 class="card-title">Curriculum vitae</h5>
                 <p s="card-text">Digitalisation de mon CV</p>
-                <a href="https://digidias.onrender.com/" class="btn btn-primary align-self-center " target="_blank">
+                <a href={userData.site} class="btn btn-primary align-self-center " target="_blank">
                   Voir le site
                 </a>
               </div>

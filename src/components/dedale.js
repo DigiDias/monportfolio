@@ -3,10 +3,11 @@ import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-const Dedale = () => {
+const Dedale = ({site}) => {
   const [users, setUsers] = useState(null);
 
   const getUsers = async () => {
+console.log("site de sam =", site);
     try {
       const res = await fetch("https://api.github.com/users/digidias");
       if (!res.ok)
@@ -56,7 +57,7 @@ const Dedale = () => {
                        <li className="border-bottom border-secondary pb-2">
                 <i className="bi bi-file-earmark-person cv-icon"></i>{" "}
   <a
-    href="https://digidias.onrender.com/" target="_blank"
+    href={site} target="_blank"
     style={{ textDecoration: "none", color: "inherit" }}
   >
     Voir mon CV

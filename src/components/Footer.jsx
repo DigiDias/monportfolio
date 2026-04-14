@@ -11,6 +11,8 @@ const Footer = ({
   Pays,
   Tel,
   Email,
+  site
+ 
 }) => {
   return (
     <footer
@@ -73,7 +75,7 @@ const Footer = ({
           </Link>
           <Link
             className="nav-link text-primary "
-            to="https://digidias.onrender.com/"
+            to={site}
             target="_blank"
           >
             Curriculum Vitae
