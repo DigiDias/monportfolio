@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../App.css";
 import "../assets/home.css";
 
-
 import Dedale from "../components/dedale";
 
 const Home = ({ nom, prenom }) => {
@@ -38,7 +37,7 @@ const Home = ({ nom, prenom }) => {
               <Dedale />
               <button
                 id="btnFermer"
-                className="btn btn-secondary align-self-end"
+                className="btn btn-danger align-self-center mt-1 mb-1"
                 onClick={handleClose}
               >
                 Fermer
@@ -176,30 +175,24 @@ const Home = ({ nom, prenom }) => {
                 class="progress-bar bg-secondary"
                 style={{ width: "50%" }}
               ></div>
-
-
-              
             </div>
 
-          <div className="d-flex center">
-    <video
-        
-        autoPlay
-        loop
-        muted
-          playsInline
-  controls
-        style={{width:"100%"}} 
-      >
-        <source src="/videos/IA_Digidias.mp4" type="video/mp4" />
-        Votre navigateur ne supporte pas la vidéo.
-      </video>
-</div>
+            {/* <div className="d-flex center">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
+                style={{ width: "100%" }}
+              >
+                <source src="/videos/IA_Digidias.mp4" type="video/mp4" />
+                Votre navigateur ne supporte pas la vidéo.
+              </video>
+            </div> */}
 
           </article>
-
         </section>
-
       </main>
     </div>
   );

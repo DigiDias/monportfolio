@@ -24,13 +24,13 @@ const Dedale = () => {
 
   return (
     <div>
-      <h2 className="d-flex w-100 mb-0 ms-0 border-bottom border-2 border-secondary">
+      <h2 className="w-100 mb-0 ms-0 border-bottom border-2 border-secondary text-center">
         Mon profil GitHub
       </h2>
 
       <div className="popup">
         <div className="popup-img t">
-          <img src="/img/avatar_Sammy.jpg" alt="Avatar Sammy" />
+          <img src="/img/Caricature_Sammy.jpg" alt="Caricature Sammy" style={{"height":"25rem"}}/>
         </div>
 
         {users && (
