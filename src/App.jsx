@@ -55,7 +55,7 @@ function App() {
      
       </Routes>
       <Footer {...userData}/>
-        <Dedale {...userData} />
+        
     </BrowserRouter>
   );
 }
