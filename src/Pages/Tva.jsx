@@ -48,17 +48,17 @@ const marge = HT ? (HT - 100).toFixed(2) : "";
 
 
     // ajouter %
-    setTxMarge(value)
-  }
+    setTxMarge(value)}
 
   function handleMontantHTChange(event) {
   
     let value = event.target.value;
 
-      value = value.replace("€", "");
+    value = value
+    .replace(/€/g, "")   // supprime tous les €
+    .replace(/,/g, "."); // remplace toutes les virgules
     
-    setMontantHT(value)
-  }
+    setMontantHT(value)}
 
   return (
     <div>
@@ -150,22 +150,22 @@ const marge = HT ? (HT - 100).toFixed(2) : "";
   <tbody>
     <tr>
       <td className="text-start">Prix d'achat</td>
-      <td>100.00 €</td>
+      <td>{montantHT? (montantTTC/coefficient).toFixed(2): "100.00"}€ </td>
     </tr>
 
     <tr>
       <td className="text-start">Prix de vente TTC</td>
-      <td>{ttc} €</td>
+      <td>{montantTTC? montantTTC.toFixed(2) :ttc} €</td>
     </tr>
 
     <tr>
       <td className="text-start">Prix de vente HT</td>
-      <td>{HT} €</td>
+      <td>{montantHT? montantHT : HT} €</td>
     </tr>
 
     <tr>
       <td className="text-start">Marge</td>
-      <td>{marge} €</td>
+      <td>{montantHT? (montantHT-(montantTTC/coefficient)).toFixed(2) : marge} €</td>
     </tr>
   </tbody>
 </table>
@@ -178,7 +178,7 @@ const marge = HT ? (HT - 100).toFixed(2) : "";
       <input
         type="text"
         className="form-control w-25 mb-3 center"
-        placeholder="Entrez le montant hors taxe"
+        placeholder="HT"
         value={montantHT? montantHT + "€" :""} 
         onChange={handleMontantHTChange}
       />
