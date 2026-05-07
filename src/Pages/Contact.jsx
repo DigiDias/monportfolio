@@ -58,6 +58,11 @@ console.log("Données à envoyer :", data);
       const result = await response.json();
       console.log("Réponse serveur :", result);
       setMessageStatus("Message envoyé avec succès !");
+      setTimeout(()=>{
+        setMessageStatus("");
+      },2000)
+
+     
       setIsError(false);
     } catch (error) {
       console.error("Erreur envoi :", error);
