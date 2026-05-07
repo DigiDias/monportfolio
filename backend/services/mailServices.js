@@ -24,10 +24,10 @@ export const sendMailMailjet = async ({ subject, text, html, email, html2 }) => 
         {
           From: {
             
-            Email: process.env.SMTP_USER,
+            Email: process.env.SMTP_USER_MAIL,
             Name: "Contact Site Digidias.re"
           },
-          To: formatAddresses(process.env.SMTP_USER),
+          To: formatAddresses(process.env.SMTP_USER_MAIL),
        
           Subject: subject,
           TextPart: text,
@@ -37,7 +37,7 @@ export const sendMailMailjet = async ({ subject, text, html, email, html2 }) => 
         {
           From: {
             
-            Email: process.env.SMTP_USER,
+            Email: process.env.SMTP_USER_MAIL,
             Name: "Contact Site Digidias.re"
           },
           To: formatAddresses(email),
