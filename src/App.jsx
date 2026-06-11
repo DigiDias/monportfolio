@@ -19,6 +19,8 @@ import Holding from "./Pages/Holding.jsx";
 import Foot from "./Pages/Foot.jsx";
 import Tva from "./Pages/Tva.jsx";
 import Dedale from "./components/dedale.js"
+import Adresses from "./Pages/adresses.jsx";
+
 
 
 function App() {
@@ -52,6 +54,7 @@ function App() {
         <Route path="/holding" element={<Holding />} />
         <Route path="/foot" element={<Foot />} />
         <Route path="/tva" element={<Tva />} />
+        <Route path="/adresses" element={<Adresses />} />
      
       </Routes>
       <Footer {...userData}/>

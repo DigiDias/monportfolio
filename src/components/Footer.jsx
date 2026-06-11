@@ -99,6 +99,10 @@ const Footer = ({
           <Link className="nav-link text-primary " to="/tva">
             Calculateur de TVA
           </Link>
+
+          <Link className="nav-link text-primary " to="/adresses">
+            Calculateur de distances
+          </Link>
         </section>
       </section>
 

@@ -1,6 +1,6 @@
 //importataation de .env
-import dotenv from "dotenv";
-dotenv.config();
+
+// dotenv.config();
 
 //connexion à l'API avec fetch pour le classement
 const gestFoot = async() => {

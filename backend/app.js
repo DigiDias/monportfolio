@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import mailRoute from "./routes/mailRoute.js";
 import footRoute from "./routes/footRoutes.js";
+import adressesRoutes from "./routes/adressesRoutes.js";
 import helmet from "helmet";
 
 dotenv.config();
@@ -26,6 +27,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/mail", mailRoute);
 app.use("/api/foot", footRoute);
+app.use("/api/", adressesRoutes);
 
 
 // SERVER
